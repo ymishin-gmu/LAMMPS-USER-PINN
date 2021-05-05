@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="atom_8cpp">atom.cpp</innerfile>
+    <innerfile refid="atom_8h">atom.h</innerfile>
+    <innerfile refid="input_8cpp">input.cpp</innerfile>
+    <innerfile refid="input_8h">input.h</innerfile>
+    <innerfile refid="lammps_8cpp">lammps.cpp</innerfile>
+    <innerfile refid="lammps_8h">lammps.h</innerfile>
+    <innerfile refid="library_8cpp">library.cpp</innerfile>
+    <innerfile refid="library_8h">library.h</innerfile>
+    <innerfile refid="lmptype_8h">lmptype.h</innerfile>
+    <innerfile refid="math__eigen_8h">math_eigen.h</innerfile>
+    <innerfile refid="my__page_8cpp">my_page.cpp</innerfile>
+    <innerfile refid="my__page_8h">my_page.h</innerfile>
+    <innerfile refid="my__pool__chunk_8cpp">my_pool_chunk.cpp</innerfile>
+    <innerfile refid="my__pool__chunk_8h">my_pool_chunk.h</innerfile>
+    <innerfile refid="pointers_8h">pointers.h</innerfile>
+    <innerfile refid="potential__file__reader_8cpp">potential_file_reader.cpp</innerfile>
+    <innerfile refid="potential__file__reader_8h">potential_file_reader.h</innerfile>
+    <innerfile refid="text__file__reader_8cpp">text_file_reader.cpp</innerfile>
+    <innerfile refid="text__file__reader_8h">text_file_reader.h</innerfile>
+    <innerfile refid="tokenizer_8cpp">tokenizer.cpp</innerfile>
+    <innerfile refid="tokenizer_8h">tokenizer.h</innerfile>
+    <innerfile refid="utils_8cpp">utils.cpp</innerfile>
+    <innerfile refid="utils_8h">utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="lammps_8h" kind="file" language="C++">
+    <compoundname>lammps.h</compoundname>
+    <innerclass refid="classLAMMPS__NS_1_1LAMMPS" prot="public">LAMMPS_NS::LAMMPS</innerclass>
+    <innernamespace refid="namespaceLAMMPS__NS">LAMMPS_NS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>----------------------------------------------------------</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>LAMMPS<sp/>-<sp/>Large-scale<sp/>Atomic/Molecular<sp/>Massively<sp/>Parallel<sp/>Simulator</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/>http://lammps.sandia.gov,<sp/>Sandia<sp/>National<sp/>Laboratories</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>Steve<sp/>Plimpton,<sp/>sjplimp@sandia.gov</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(2003)<sp/>Sandia<sp/>Corporation.<sp/><sp/>Under<sp/>the<sp/>terms<sp/>of<sp/>Contract</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>DE-AC04-94AL85000<sp/>with<sp/>Sandia<sp/>Corporation,<sp/>the<sp/>U.S.<sp/>Government<sp/>retains</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>certain<sp/>rights<sp/>in<sp/>this<sp/>software.<sp/><sp/>This<sp/>software<sp/>is<sp/>distributed<sp/>under</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>See<sp/>the<sp/>README<sp/>file<sp/>in<sp/>the<sp/>top-level<sp/>LAMMPS<sp/>directory.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">-------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LMP_LAMMPS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LMP_LAMMPS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">LAMMPS_NS<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classLAMMPS__NS_1_1LAMMPS" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ptrs<sp/>to<sp/>fundamental<sp/>LAMMPS<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Memory<sp/>*memory;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>memory<sp/>allocation<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Error<sp/>*error;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>error<sp/>handling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Universe<sp/>*universe;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>universe<sp/>of<sp/>processors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLAMMPS__NS_1_1Input" kindref="compound">Input</ref><sp/>*input;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>input<sp/>script<sp/>processing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ptrs<sp/>to<sp/>top-level<sp/>LAMMPS-specific<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLAMMPS__NS_1_1Atom" kindref="compound">Atom</ref><sp/>*atom;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>atom-based<sp/>quantities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Update<sp/>*update;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>integrators/minimizers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Neighbor<sp/>*neighbor;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>neighbor<sp/>lists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Comm<sp/>*comm;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>inter-processor<sp/>communication</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Domain<sp/>*domain;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>simulation<sp/>box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Force<sp/>*force;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>inter-particle<sp/>forces</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Modify<sp/>*modify;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fixes<sp/>and<sp/>computes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Group<sp/>*group;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>groups<sp/>of<sp/>atoms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Output<sp/>*output;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>thermo/dump/restart</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Timer<sp/>*timer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CPU<sp/>timing<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*version;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LAMMPS<sp/>version<sp/>string<sp/>=<sp/>date</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_ver;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>numeric<sp/>version<sp/>id<sp/>derived<sp/>from<sp/>*version*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>is<sp/>constructed<sp/>so<sp/>that<sp/>will<sp/>be<sp/>greater</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>newer<sp/>versions<sp/>in<sp/>numeric<sp/>or<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>value<sp/>comparisons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>MPI_Comm<sp/>world;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MPI<sp/>communicator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>FILE<sp/>*infile;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>infile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>FILE<sp/>*screen;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>screen<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>FILE<sp/>*logfile;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>logfile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>initclock;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wall<sp/>clock<sp/>at<sp/>instantiation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*suffix,*suffix2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>suffixes<sp/>to<sp/>add<sp/>to<sp/>input<sp/>script<sp/>style<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>suffix_enable;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>if<sp/>suffixes<sp/>are<sp/>enabled,<sp/>0<sp/>if<sp/>disabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*exename;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>argv[0]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>***packargs;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>arguments<sp/>for<sp/>cmdline<sp/>package<sp/>commands</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_package;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>cmdline<sp/>package<sp/>commands</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cite_enable;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>if<sp/>generating<sp/>log.cite,<sp/>0<sp/>if<sp/>disabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>clientserver;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0<sp/>=<sp/>neither,<sp/>1<sp/>=<sp/>client,<sp/>2<sp/>=<sp/>server</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*cslib;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>client/server<sp/>messaging<sp/>via<sp/>CSlib</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>MPI_Comm<sp/>cscomm;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MPI<sp/>comm<sp/>for<sp/>client+server<sp/>in<sp/>mpi/one<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">KokkosLMP<sp/>*kokkos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>KOKKOS<sp/>accelerator<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AtomKokkos<sp/>*atomKK;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>KOKKOS<sp/>version<sp/>of<sp/>Atom<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MemoryKokkos<sp/>*memoryKK;<sp/><sp/></highlight><highlight class="comment">//<sp/>KOKKOS<sp/>version<sp/>of<sp/>Memory<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Python<sp/>*<sp/>python;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Python<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CiteMe<sp/>*citeme;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>citation<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classLAMMPS__NS_1_1LAMMPS_1a494c5512fbe010f7eddf168ee45878d9" kindref="member">match_style</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*style,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>installed_packages[];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1LAMMPS_1a0e0366f32d92ec48bd0c034826e9c101" kindref="member">is_installed_pkg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pkg);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>has_git_info;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>git_commit[];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>git_branch[];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>git_descriptor[];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1LAMMPS_1a2ed7025165c177afd77e4bf54ef983d6" kindref="member">LAMMPS</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**,<sp/>MPI_Comm);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1LAMMPS_1ab3410932868638d63f0683577e189e2e" kindref="member">~LAMMPS</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>create();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>post_create();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroy();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_config(FILE<sp/>*);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>compile<sp/>time<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">package_styles_lists<sp/>*pkg_lists;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_pkg_lists();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>help();</highlight></codeline>
+<codeline lineno="95" refid="classLAMMPS__NS_1_1LAMMPS_1a2ed7025165c177afd77e4bf54ef983d6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1LAMMPS_1a2ed7025165c177afd77e4bf54ef983d6" kindref="member">LAMMPS</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="97" refid="classLAMMPS__NS_1_1LAMMPS_1ab9ab45344bbb73ab942a410b3040068c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1LAMMPS_1ab9ab45344bbb73ab942a410b3040068c" kindref="member">LAMMPS</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref><sp/>&amp;)<sp/>{};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ERROR/WARNING<sp/>messages:</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"></highlight></codeline>
+<codeline lineno="106"><highlight class="comment">E:<sp/>Invalid<sp/>command-line<sp/>argument</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"></highlight></codeline>
+<codeline lineno="108"><highlight class="comment">One<sp/>or<sp/>more<sp/>command-line<sp/>arguments<sp/>is<sp/>invalid.<sp/><sp/>Check<sp/>the<sp/>syntax<sp/>of</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">the<sp/>command<sp/>you<sp/>are<sp/>using<sp/>to<sp/>launch<sp/>LAMMPS.</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"></highlight></codeline>
+<codeline lineno="111"><highlight class="comment">E:<sp/>Cannot<sp/>use<sp/>-reorder<sp/>after<sp/>-partition</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"></highlight></codeline>
+<codeline lineno="113"><highlight class="comment">Self-explanatory.<sp/><sp/>See<sp/>doc<sp/>page<sp/>discussion<sp/>of<sp/>command-line<sp/>switches.</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"></highlight></codeline>
+<codeline lineno="115"><highlight class="comment">E:<sp/>Processor<sp/>partitions<sp/>do<sp/>not<sp/>match<sp/>number<sp/>of<sp/>allocated<sp/>processors</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"></highlight></codeline>
+<codeline lineno="117"><highlight class="comment">The<sp/>total<sp/>number<sp/>of<sp/>processors<sp/>in<sp/>all<sp/>partitions<sp/>must<sp/>match<sp/>the<sp/>number</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">of<sp/>processors<sp/>LAMMPS<sp/>is<sp/>running<sp/>on.</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"></highlight></codeline>
+<codeline lineno="120"><highlight class="comment">E:<sp/>Must<sp/>use<sp/>-in<sp/>switch<sp/>with<sp/>multiple<sp/>partitions</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"></highlight></codeline>
+<codeline lineno="122"><highlight class="comment">A<sp/>multi-partition<sp/>simulation<sp/>cannot<sp/>read<sp/>the<sp/>input<sp/>script<sp/>from<sp/>stdin.</highlight></codeline>
+<codeline lineno="123"><highlight class="comment">The<sp/>-in<sp/>command-line<sp/>option<sp/>must<sp/>be<sp/>used<sp/>to<sp/>specify<sp/>a<sp/>file.</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"></highlight></codeline>
+<codeline lineno="125"><highlight class="comment">E:<sp/>Can<sp/>only<sp/>use<sp/>-pscreen<sp/>with<sp/>multiple<sp/>partitions</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"></highlight></codeline>
+<codeline lineno="127"><highlight class="comment">Self-explanatory.<sp/><sp/>See<sp/>doc<sp/>page<sp/>discussion<sp/>of<sp/>command-line<sp/>switches.</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"></highlight></codeline>
+<codeline lineno="129"><highlight class="comment">E:<sp/>Can<sp/>only<sp/>use<sp/>-plog<sp/>with<sp/>multiple<sp/>partitions</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"></highlight></codeline>
+<codeline lineno="131"><highlight class="comment">Self-explanatory.<sp/><sp/>See<sp/>doc<sp/>page<sp/>discussion<sp/>of<sp/>command-line<sp/>switches.</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"></highlight></codeline>
+<codeline lineno="133"><highlight class="comment">E:<sp/>Cannot<sp/>open<sp/>universe<sp/>screen<sp/>file</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"></highlight></codeline>
+<codeline lineno="135"><highlight class="comment">For<sp/>a<sp/>multi-partition<sp/>run,<sp/>the<sp/>master<sp/>screen<sp/>file<sp/>cannot<sp/>be<sp/>opened.</highlight></codeline>
+<codeline lineno="136"><highlight class="comment">Check<sp/>that<sp/>the<sp/>directory<sp/>you<sp/>are<sp/>running<sp/>in<sp/>allows<sp/>for<sp/>files<sp/>to<sp/>be</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">created.</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"></highlight></codeline>
+<codeline lineno="139"><highlight class="comment">E:<sp/>Cannot<sp/>open<sp/>log.lammps<sp/>for<sp/>writing</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"></highlight></codeline>
+<codeline lineno="141"><highlight class="comment">The<sp/>default<sp/>LAMMPS<sp/>log<sp/>file<sp/>cannot<sp/>be<sp/>opened.<sp/><sp/>Check<sp/>that<sp/>the</highlight></codeline>
+<codeline lineno="142"><highlight class="comment">directory<sp/>you<sp/>are<sp/>running<sp/>in<sp/>allows<sp/>for<sp/>files<sp/>to<sp/>be<sp/>created.</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"></highlight></codeline>
+<codeline lineno="144"><highlight class="comment">E:<sp/>Cannot<sp/>open<sp/>universe<sp/>log<sp/>file</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"></highlight></codeline>
+<codeline lineno="146"><highlight class="comment">For<sp/>a<sp/>multi-partition<sp/>run,<sp/>the<sp/>master<sp/>log<sp/>file<sp/>cannot<sp/>be<sp/>opened.</highlight></codeline>
+<codeline lineno="147"><highlight class="comment">Check<sp/>that<sp/>the<sp/>directory<sp/>you<sp/>are<sp/>running<sp/>in<sp/>allows<sp/>for<sp/>files<sp/>to<sp/>be</highlight></codeline>
+<codeline lineno="148"><highlight class="comment">created.</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"></highlight></codeline>
+<codeline lineno="150"><highlight class="comment">E:<sp/>Cannot<sp/>open<sp/>input<sp/>script<sp/>%s</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"></highlight></codeline>
+<codeline lineno="152"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"></highlight></codeline>
+<codeline lineno="154"><highlight class="comment">E:<sp/>Cannot<sp/>open<sp/>screen<sp/>file</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"></highlight></codeline>
+<codeline lineno="156"><highlight class="comment">The<sp/>screen<sp/>file<sp/>specified<sp/>as<sp/>a<sp/>command-line<sp/>argument<sp/>cannot<sp/>be</highlight></codeline>
+<codeline lineno="157"><highlight class="comment">opened.<sp/><sp/>Check<sp/>that<sp/>the<sp/>directory<sp/>you<sp/>are<sp/>running<sp/>in<sp/>allows<sp/>for<sp/>files</highlight></codeline>
+<codeline lineno="158"><highlight class="comment">to<sp/>be<sp/>created.</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"></highlight></codeline>
+<codeline lineno="160"><highlight class="comment">E:<sp/>Cannot<sp/>open<sp/>logfile</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"></highlight></codeline>
+<codeline lineno="162"><highlight class="comment">The<sp/>LAMMPS<sp/>log<sp/>file<sp/>named<sp/>in<sp/>a<sp/>command-line<sp/>argument<sp/>cannot<sp/>be<sp/>opened.</highlight></codeline>
+<codeline lineno="163"><highlight class="comment">Check<sp/>that<sp/>the<sp/>path<sp/>and<sp/>name<sp/>are<sp/>correct.</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"></highlight></codeline>
+<codeline lineno="165"><highlight class="comment">E:<sp/>Smallint<sp/>setting<sp/>in<sp/>lmptype.h<sp/>is<sp/>invalid</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"></highlight></codeline>
+<codeline lineno="167"><highlight class="comment">It<sp/>has<sp/>to<sp/>be<sp/>the<sp/>size<sp/>of<sp/>an<sp/>integer.</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"></highlight></codeline>
+<codeline lineno="169"><highlight class="comment">E:<sp/>Imageint<sp/>setting<sp/>in<sp/>lmptype.h<sp/>is<sp/>invalid</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"></highlight></codeline>
+<codeline lineno="171"><highlight class="comment">Imageint<sp/>must<sp/>be<sp/>as<sp/>large<sp/>or<sp/>larger<sp/>than<sp/>smallint.</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"></highlight></codeline>
+<codeline lineno="173"><highlight class="comment">E:<sp/>Tagint<sp/>setting<sp/>in<sp/>lmptype.h<sp/>is<sp/>invalid</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"></highlight></codeline>
+<codeline lineno="175"><highlight class="comment">Tagint<sp/>must<sp/>be<sp/>as<sp/>large<sp/>or<sp/>larger<sp/>than<sp/>smallint.</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"></highlight></codeline>
+<codeline lineno="177"><highlight class="comment">E:<sp/>Bigint<sp/>setting<sp/>in<sp/>lmptype.h<sp/>is<sp/>invalid</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"></highlight></codeline>
+<codeline lineno="179"><highlight class="comment">Size<sp/>of<sp/>bigint<sp/>is<sp/>less<sp/>than<sp/>size<sp/>of<sp/>tagint.</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"></highlight></codeline>
+<codeline lineno="181"><highlight class="comment">E:<sp/>MPI_LMP_TAGINT<sp/>and<sp/>tagint<sp/>in<sp/>lmptype.h<sp/>are<sp/>not<sp/>compatible</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"></highlight></codeline>
+<codeline lineno="183"><highlight class="comment">The<sp/>size<sp/>of<sp/>the<sp/>MPI<sp/>datatype<sp/>does<sp/>not<sp/>match<sp/>the<sp/>size<sp/>of<sp/>a<sp/>tagint.</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"></highlight></codeline>
+<codeline lineno="185"><highlight class="comment">E:<sp/>MPI_LMP_BIGINT<sp/>and<sp/>bigint<sp/>in<sp/>lmptype.h<sp/>are<sp/>not<sp/>compatible</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"></highlight></codeline>
+<codeline lineno="187"><highlight class="comment">The<sp/>size<sp/>of<sp/>the<sp/>MPI<sp/>datatype<sp/>does<sp/>not<sp/>match<sp/>the<sp/>size<sp/>of<sp/>a<sp/>bigint.</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"></highlight></codeline>
+<codeline lineno="189"><highlight class="comment">E:<sp/>Small<sp/>to<sp/>big<sp/>integers<sp/>are<sp/>not<sp/>sized<sp/>correctly</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"></highlight></codeline>
+<codeline lineno="191"><highlight class="comment">This<sp/>error<sp/>occurs<sp/>when<sp/>the<sp/>sizes<sp/>of<sp/>smallint,<sp/>imageint,<sp/>tagint,<sp/>bigint,</highlight></codeline>
+<codeline lineno="192"><highlight class="comment">as<sp/>defined<sp/>in<sp/>src/lmptype.h<sp/>are<sp/>not<sp/>what<sp/>is<sp/>expected.<sp/><sp/>Contact</highlight></codeline>
+<codeline lineno="193"><highlight class="comment">the<sp/>developers<sp/>if<sp/>this<sp/>occurs.</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"></highlight></codeline>
+<codeline lineno="195"><highlight class="comment">E:<sp/>Cannot<sp/>use<sp/>-kokkos<sp/>on<sp/>without<sp/>KOKKOS<sp/>installed</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"></highlight></codeline>
+<codeline lineno="197"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"></highlight></codeline>
+<codeline lineno="199"><highlight class="comment">E:<sp/>Using<sp/>suffix<sp/>gpu<sp/>without<sp/>GPU<sp/>package<sp/>installed</highlight></codeline>
+<codeline lineno="200"><highlight class="comment"></highlight></codeline>
+<codeline lineno="201"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"></highlight></codeline>
+<codeline lineno="203"><highlight class="comment">E:<sp/>Using<sp/>suffix<sp/>intel<sp/>without<sp/>USER-INTEL<sp/>package<sp/>installed</highlight></codeline>
+<codeline lineno="204"><highlight class="comment"></highlight></codeline>
+<codeline lineno="205"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="206"><highlight class="comment"></highlight></codeline>
+<codeline lineno="207"><highlight class="comment">E:<sp/>Using<sp/>suffix<sp/>kk<sp/>without<sp/>KOKKOS<sp/>package<sp/>enabled</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"></highlight></codeline>
+<codeline lineno="209"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"></highlight></codeline>
+<codeline lineno="211"><highlight class="comment">E:<sp/>Using<sp/>suffix<sp/>omp<sp/>without<sp/>USER-OMP<sp/>package<sp/>installed</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"></highlight></codeline>
+<codeline lineno="213"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"></highlight></codeline>
+<codeline lineno="215"><highlight class="comment">E:<sp/>Too<sp/>many<sp/>-pk<sp/>arguments<sp/>in<sp/>command<sp/>line</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"></highlight></codeline>
+<codeline lineno="217"><highlight class="comment">The<sp/>string<sp/>formed<sp/>by<sp/>concatenating<sp/>the<sp/>arguments<sp/>is<sp/>too<sp/>long.<sp/><sp/>Use<sp/>a</highlight></codeline>
+<codeline lineno="218"><highlight class="comment">package<sp/>command<sp/>in<sp/>the<sp/>input<sp/>script<sp/>instead.</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"></highlight></codeline>
+<codeline lineno="220"><highlight class="comment">U:<sp/>Cannot<sp/>use<sp/>-cuda<sp/>on<sp/>and<sp/>-kokkos<sp/>on<sp/>together</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"></highlight></codeline>
+<codeline lineno="222"><highlight class="comment">This<sp/>is<sp/>not<sp/>allowed<sp/>since<sp/>both<sp/>packages<sp/>can<sp/>use<sp/>GPUs.</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"></highlight></codeline>
+<codeline lineno="224"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h"/>
+  </compounddef>
+</doxygen>

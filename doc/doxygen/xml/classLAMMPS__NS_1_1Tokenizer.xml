@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1Tokenizer" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::Tokenizer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Tokenizer_1a23c058547fbc73b5659191844a9f258c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="32" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Tokenizer_1a6089a3fdc045934b5f2b5d4abd578e11" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string separators</definition>
+        <argsstring></argsstring>
+        <name>separators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="33" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Tokenizer_1a52a8a99bfbb1c17e94e3a9f816d8f5ee" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="34" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Tokenizer_1a5dca16b7c7968c99a861b6f552e92b17" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ntokens</definition>
+        <argsstring></argsstring>
+        <name>ntokens</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="35" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1a9cc04453cbea9f23710ddc0614897774" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Tokenizer</definition>
+        <argsstring>(const std::string &amp;str, const std::string &amp;separators=TOKENIZER_DEFAULT_SEPARATORS)</argsstring>
+        <name>Tokenizer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>separators</declname>
+          <defval>TOKENIZER_DEFAULT_SEPARATORS</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Class for splitting text into words</para>
+<para>This tokenizer will break down a string into sub-strings (i.e words) separated by the given separator characters.</para>
+<para><verbatim>embed:rst
+
+*See also*
+   :cpp:class:`ValueTokenizer`, :cpp:func:`utils::split_words`</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to be processed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>separators</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string with separator characters (default: &quot; \t\r\n\f&quot;) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="37" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1a9ac095d2563680ac9f4a6f390f0ecbc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Tokenizer</definition>
+        <argsstring>(Tokenizer &amp;&amp;)</argsstring>
+        <name>Tokenizer</name>
+        <param>
+          <type>Tokenizer &amp;&amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="38" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1a7465c3c66967ba64e15f5e556325162c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Tokenizer</definition>
+        <argsstring>(const Tokenizer &amp;)</argsstring>
+        <name>Tokenizer</name>
+        <param>
+          <type>const Tokenizer &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="39" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1a3d86e34e16f53a33b217e9b27e7f81e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Tokenizer &amp;</type>
+        <definition>Tokenizer&amp; operator=</definition>
+        <argsstring>(const Tokenizer &amp;)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const Tokenizer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="40" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1a05aaf854fb7b504b42e62d91c082555c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Tokenizer &amp;</type>
+        <definition>Tokenizer&amp; operator=</definition>
+        <argsstring>(Tokenizer &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>Tokenizer &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="41" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Re-position the tokenizer state to the first word, i.e. the first non-separator character </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="43" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1a22e04fd90a8da8fbaa968a171d19c6f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void skip</definition>
+        <argsstring>(int n)</argsstring>
+        <name>skip</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Skip over a given number of tokens</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of tokens to skip over </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="44" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="85" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1a5ac70fe9462200eec1fe01b48ea992f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool has_next</definition>
+        <argsstring>() const</argsstring>
+        <name>has_next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicate whether more tokens are available</para>
+<para><simplesect kind="return"><para>true if there are more tokens, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="45" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1abf5acdb9f865006dd3d41f084403f74f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool contains</definition>
+        <argsstring>(const std::string &amp;str) const</argsstring>
+        <name>contains</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Search the text to be processed for a sub-string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to be searched for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if string was found, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="46" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1afba811f5984f17a43875432cb2845bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve next token.</para>
+<para><simplesect kind="return"><para>string with the next token </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="47" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="109" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1ad873dc786f051a2c04e32d1541d3702e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t count</definition>
+        <argsstring>()</argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count number of tokens in text.</para>
+<para><simplesect kind="return"><para>number of counted tokens </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="49" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="128" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Tokenizer_1abc12e1da3f00c1a120a02b136f0730dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; as_vector</definition>
+        <argsstring>()</argsstring>
+        <name>as_vector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the entire text converted to an STL vector of tokens.</para>
+<para><simplesect kind="return"><para>The STL vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="50" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="139" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="31" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="31" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1abc12e1da3f00c1a120a02b136f0730dd" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>as_vector</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1abf5acdb9f865006dd3d41f084403f74f" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>contains</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1ad873dc786f051a2c04e32d1541d3702e" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>count</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a5ac70fe9462200eec1fe01b48ea992f3" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>has_next</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1afba811f5984f17a43875432cb2845bc3" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>next</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a5dca16b7c7968c99a861b6f552e92b17" prot="private" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>ntokens</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a3d86e34e16f53a33b217e9b27e7f81e4" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>operator=</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a05aaf854fb7b504b42e62d91c082555c" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>operator=</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>reset</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a6089a3fdc045934b5f2b5d4abd578e11" prot="private" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>separators</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a22e04fd90a8da8fbaa968a171d19c6f8" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>skip</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a52a8a99bfbb1c17e94e3a9f816d8f5ee" prot="private" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>start</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a23c058547fbc73b5659191844a9f258c" prot="private" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>text</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a9cc04453cbea9f23710ddc0614897774" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>Tokenizer</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a9ac095d2563680ac9f4a6f390f0ecbc9" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>Tokenizer</name></member>
+      <member refid="classLAMMPS__NS_1_1Tokenizer_1a7465c3c66967ba64e15f5e556325162c" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Tokenizer</scope><name>Tokenizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceLAMMPS__NS" kind="namespace" language="C++">
+    <compoundname>LAMMPS_NS</compoundname>
+    <innerclass refid="structLAMMPS__NS_1_1package__styles__lists" prot="public">LAMMPS_NS::package_styles_lists</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1LAMMPS" prot="public">LAMMPS_NS::LAMMPS</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1MyPoolChunk" prot="public">LAMMPS_NS::MyPoolChunk</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1MyPage" prot="public">LAMMPS_NS::MyPage</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1Pointers" prot="public">LAMMPS_NS::Pointers</innerclass>
+    <innerclass refid="unionLAMMPS__NS_1_1ubuf" prot="public">LAMMPS_NS::ubuf</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1Atom" prot="public">LAMMPS_NS::Atom</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1Input" prot="public">LAMMPS_NS::Input</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1Tokenizer" prot="public">LAMMPS_NS::Tokenizer</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1TokenizerException" prot="public">LAMMPS_NS::TokenizerException</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1InvalidIntegerException" prot="public">LAMMPS_NS::InvalidIntegerException</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1InvalidFloatException" prot="public">LAMMPS_NS::InvalidFloatException</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1ValueTokenizer" prot="public">LAMMPS_NS::ValueTokenizer</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1TextFileReader" prot="public">LAMMPS_NS::TextFileReader</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1FileReaderException" prot="public">LAMMPS_NS::FileReaderException</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1EOFException" prot="public">LAMMPS_NS::EOFException</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1PotentialFileReader" prot="public">LAMMPS_NS::PotentialFileReader</innerclass>
+    <innerclass refid="structLAMMPS__NS_1_1HyperOneCoeff" prot="public">LAMMPS_NS::HyperOneCoeff</innerclass>
+    <innernamespace refid="namespaceLAMMPS__NS_1_1utils">LAMMPS_NS::utils</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="pointers_8h_1ac1880593a5e084527c59ac3008f4cdc1" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ExecutionSpace</name>
+        <enumvalue id="pointers_8h_1ac1880593a5e084527c59ac3008f4cdc1aa263c7eb7ccdc72b8ddf4a78f9f92829" prot="public">
+          <name>Host</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pointers_8h_1ac1880593a5e084527c59ac3008f4cdc1ab9959e3ca6217e02e152d8ce68ec463c" prot="public">
+          <name>Device</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="44" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="lmptype_8h_1ad05b39cab98c2ea86551b631e839efbf" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int smallint</definition>
+        <argsstring></argsstring>
+        <name>smallint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="86" column="13" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="lmptype_8h_1a4ef479e1cafe44d7e3be9a3d6fcd230d" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int imageint</definition>
+        <argsstring></argsstring>
+        <name>imageint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="87" column="13" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="lmptype_8h_1a52b42d39a4b5f71e45f508f3f5caee39" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int tagint</definition>
+        <argsstring></argsstring>
+        <name>tagint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="88" column="13" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="lmptype_8h_1aedcdee02d074e759169bfde5402e8439" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>typedef int bigint</definition>
+        <argsstring></argsstring>
+        <name>bigint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="89" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="24" column="1"/>
+  </compounddef>
+</doxygen>

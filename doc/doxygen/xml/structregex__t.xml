@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structregex__t" kind="struct" language="C++" prot="public">
+    <compoundname>regex_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structregex__t_1aa5044999f3339d2ba3b1bf22fa6cfe95" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" line="1173" column="20" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="1173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structregex__t_1a49725d2659c0161681c55e3763942f68" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char ch</definition>
+        <argsstring></argsstring>
+        <name>ch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" line="1175" column="22" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="1175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structregex__t_1aac14033a045597d425bf1f7d49f54987" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ccl</definition>
+        <argsstring></argsstring>
+        <name>ccl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" line="1176" column="21" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="1176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structregex__t_1a7bc7566a3e5c86229ac4eae657f5e9ed" prot="public" static="no" mutable="no">
+        <type>union regex_t::@1</type>
+        <definition>union regex_t::@1 @2</definition>
+        <argsstring></argsstring>
+        <name>@2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" line="1177" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" line="1172" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="1172" bodyend="1178"/>
+    <listofallmembers>
+      <member refid="structregex__t_1aac14033a045597d425bf1f7d49f54987" prot="public" virt="non-virtual"><scope>regex_t</scope><name>ccl</name></member>
+      <member refid="structregex__t_1a49725d2659c0161681c55e3763942f68" prot="public" virt="non-virtual"><scope>regex_t</scope><name>ch</name></member>
+      <member refid="structregex__t_1aa5044999f3339d2ba3b1bf22fa6cfe95" prot="public" virt="non-virtual"><scope>regex_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

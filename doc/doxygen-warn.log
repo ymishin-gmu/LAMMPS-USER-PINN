@@ -1,0 +1,15 @@
+/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp:408: warning: no matching file member found for 
+template void bounds(const char *, int, const std::string &, int64_t, int64_t, int &, int &, Error *)
+Possible candidates:
+ 'void bounds(const char *file, int line, const std::string &str, bigint nmin, bigint nmax, TYPE &nlo, TYPE &nhi, Error *error)' at line 167 of file /Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h
+
+/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp:410: warning: no matching file member found for 
+template void bounds(const char *, int, const std::string &, int64_t, int64_t, long &, long &, Error *)
+Possible candidates:
+ 'void bounds(const char *file, int line, const std::string &str, bigint nmin, bigint nmax, TYPE &nlo, TYPE &nhi, Error *error)' at line 167 of file /Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h
+
+/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp:412: warning: no matching file member found for 
+template void bounds(const char *, int, const std::string &, int64_t, int64_t, long long &, long long &, Error *)
+Possible candidates:
+ 'void bounds(const char *file, int line, const std::string &str, bigint nmin, bigint nmax, TYPE &nlo, TYPE &nhi, Error *error)' at line 167 of file /Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h
+

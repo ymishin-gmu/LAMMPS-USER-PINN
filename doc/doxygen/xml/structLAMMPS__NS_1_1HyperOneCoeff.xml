@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structLAMMPS__NS_1_1HyperOneCoeff" kind="struct" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::HyperOneCoeff</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1HyperOneCoeff_1ae45c8b3865c546e694295753df8e584a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double biascoeff</definition>
+        <argsstring></argsstring>
+        <name>biascoeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="26" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1HyperOneCoeff_1a99a976c42385eeb8c93ba613ba0a19a7" prot="public" static="no" mutable="no">
+        <type>tagint</type>
+        <definition>tagint tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="27" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="25" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="25" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structLAMMPS__NS_1_1HyperOneCoeff_1ae45c8b3865c546e694295753df8e584a" prot="public" virt="non-virtual"><scope>LAMMPS_NS::HyperOneCoeff</scope><name>biascoeff</name></member>
+      <member refid="structLAMMPS__NS_1_1HyperOneCoeff_1a99a976c42385eeb8c93ba613ba0a19a7" prot="public" virt="non-virtual"><scope>LAMMPS_NS::HyperOneCoeff</scope><name>tag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

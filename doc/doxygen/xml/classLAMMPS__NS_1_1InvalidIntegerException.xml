@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1InvalidIntegerException" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::InvalidIntegerException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TokenizerException</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1InvalidIntegerException_1abbff68ef6488f500630d129910eb9136" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>InvalidIntegerException</definition>
+        <argsstring>(const std::string &amp;token)</argsstring>
+        <name>InvalidIntegerException</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thrown during converting string to integer number</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String of the token/word that caused the error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="77" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="77" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="72" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="72" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1InvalidIntegerException_1abbff68ef6488f500630d129910eb9136" prot="public" virt="non-virtual"><scope>LAMMPS_NS::InvalidIntegerException</scope><name>InvalidIntegerException</name></member>
+      <member refid="classLAMMPS__NS_1_1TokenizerException_1a36bd74109f547f7f8198faf5a12d2879" prot="private" virt="non-virtual"><scope>LAMMPS_NS::InvalidIntegerException</scope><name>message</name></member>
+      <member refid="classLAMMPS__NS_1_1TokenizerException_1afcd938a3385e0b950738c2e24cdbc484" prot="public" virt="non-virtual"><scope>LAMMPS_NS::InvalidIntegerException</scope><name>TokenizerException</name></member>
+      <member refid="classLAMMPS__NS_1_1TokenizerException_1ad62489809e3df568e973597b928d6d9b" prot="public" virt="virtual"><scope>LAMMPS_NS::InvalidIntegerException</scope><name>what</name></member>
+      <member refid="classLAMMPS__NS_1_1TokenizerException_1a20d88c6acfda9534f0609e71cd3dacaf" prot="public" virt="non-virtual"><scope>LAMMPS_NS::InvalidIntegerException</scope><name>~TokenizerException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

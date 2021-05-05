@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="unionLAMMPS__NS_1_1ubuf" kind="union" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::ubuf</compoundname>
+    <includes refid="lmptype_8h" local="no">lmptype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionLAMMPS__NS_1_1ubuf_1a873684cefeb665f3d5e6b495de57fc0d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="222" column="13" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionLAMMPS__NS_1_1ubuf_1a193e7d4afbc8ac1c220aa7130e279451" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="223" column="13" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="unionLAMMPS__NS_1_1ubuf_1a5cdd4245af25171a133da99e9808170b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ubuf</definition>
+        <argsstring>(const double &amp;arg)</argsstring>
+        <name>ubuf</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="224" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="224" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="unionLAMMPS__NS_1_1ubuf_1a86bb79057870b1bd9b4f9275e5d929fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ubuf</definition>
+        <argsstring>(const int64_t &amp;arg)</argsstring>
+        <name>ubuf</name>
+        <param>
+          <type>const int64_t &amp;</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="225" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="225" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="unionLAMMPS__NS_1_1ubuf_1a76e1c4df9fb2687d7f2055f90b08360d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ubuf</definition>
+        <argsstring>(const int &amp;arg)</argsstring>
+        <name>ubuf</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="226" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="226" bodyend="226"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Data structure for packing 32-bit and 64-bit integers into double (communication) buffers</para>
+<para>Using this union avoids aliasing issues by having member types (double, int) referencing the same buffer memory location.</para>
+<para>The explicit constructor for 32-bit integers prevents compilers from (incorrectly) calling the double constructor when storing an int into a double buffer. <verbatim>embed:rst
+
+**Usage:**
+
+.. code-block:: c++
+   :caption: To copy an integer into a double buffer:
+
+   double buf[2];
+   int    foo =   1;
+   tagint bar = 2&lt;&lt;40;
+   buf[1] = ubuf(foo).d;
+   buf[2] = ubuf(bar).d;
+
+.. code-block:: c++
+   :caption: To copy from a double buffer back to an int:
+
+   foo = (int)    ubuf(buf[1]).i;
+   bar = (tagint) ubuf(buf[2]).i;
+
+The typecasts prevent compiler warnings about possible truncation issues.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" line="221" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lmptype.h" bodystart="221" bodyend="227"/>
+    <listofallmembers>
+      <member refid="unionLAMMPS__NS_1_1ubuf_1a873684cefeb665f3d5e6b495de57fc0d" prot="public" virt="non-virtual"><scope>LAMMPS_NS::ubuf</scope><name>d</name></member>
+      <member refid="unionLAMMPS__NS_1_1ubuf_1a193e7d4afbc8ac1c220aa7130e279451" prot="public" virt="non-virtual"><scope>LAMMPS_NS::ubuf</scope><name>i</name></member>
+      <member refid="unionLAMMPS__NS_1_1ubuf_1a5cdd4245af25171a133da99e9808170b" prot="public" virt="non-virtual"><scope>LAMMPS_NS::ubuf</scope><name>ubuf</name></member>
+      <member refid="unionLAMMPS__NS_1_1ubuf_1a86bb79057870b1bd9b4f9275e5d929fa" prot="public" virt="non-virtual"><scope>LAMMPS_NS::ubuf</scope><name>ubuf</name></member>
+      <member refid="unionLAMMPS__NS_1_1ubuf_1a76e1c4df9fb2687d7f2055f90b08360d" prot="public" virt="non-virtual"><scope>LAMMPS_NS::ubuf</scope><name>ubuf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,5 @@
+[console_scripts]
+rst_anchor_check = lammpsdoc.rst_anchor_check:main
+txt2html = lammpsdoc.txt2html:main
+txt2rst = lammpsdoc.txt2rst:main
+

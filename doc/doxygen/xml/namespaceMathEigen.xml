@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceMathEigen" kind="namespace" language="C++">
+    <compoundname>MathEigen</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="math__eigen_8h_1a45b76b76e0eabf711328124fa47905ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MathEigen::jacobi3</definition>
+        <argsstring>(double const *const *mat, double *eval, double **evec)</argsstring>
+        <name>jacobi3</name>
+        <param>
+          <type>double const *const *</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>eval</declname>
+        </param>
+        <param>
+          <type>double **</type>
+          <declname>evec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A specialized function which finds the eigenvalues and eigenvectors of a 3x3 matrix (in double ** format).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the 3x3 matrix you wish to diagonalize </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>store the eigenvalues here </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>store the eigenvectors here... </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if eigenvalue calculation converged, 1 if it failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/math_eigen.h" line="28" column="5" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/math_eigen.h" declline="28" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="math__eigen_8h_1af77ad53d5574d7aa03ee01ccd1680a85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MathEigen::jacobi3</definition>
+        <argsstring>(double const mat[3][3], double *eval, double evec[3][3])</argsstring>
+        <name>jacobi3</name>
+        <param>
+          <type>double const</type>
+          <declname>mat</declname>
+          <array>[3][3]</array>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>eval</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>evec</declname>
+          <array>[3][3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/math_eigen.h" line="32" column="5" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/math_eigen.h" declline="32" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/math_eigen.h" line="18" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1MyPoolChunk" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::MyPoolChunk</compoundname>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1ad9f2000dc90e515a0dc096017e0bbf7c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ndatum</definition>
+        <argsstring></argsstring>
+        <name>ndatum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="22" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a9f461dbc7cb614bb1256776a60d35a67" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nchunk</definition>
+        <argsstring></argsstring>
+        <name>nchunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="23" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a4583649cab7884fe9bc5ea5c0dcbd38e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int minchunk</definition>
+        <argsstring></argsstring>
+        <name>minchunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="56" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a20ba41bf9a0909d250f96c0b991be979" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxchunk</definition>
+        <argsstring></argsstring>
+        <name>maxchunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="57" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1aae694388ff2578768153af8ca25b638d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbin</definition>
+        <argsstring></argsstring>
+        <name>nbin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="58" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1aedf637638807a690c48d2489bea65e0a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int chunkperpage</definition>
+        <argsstring></argsstring>
+        <name>chunkperpage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="59" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a28454b18075e20035801fe69f7b25191" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pagedelta</definition>
+        <argsstring></argsstring>
+        <name>pagedelta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="60" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a2dac7bd7ff974440f5a22dea732512e3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int binsize</definition>
+        <argsstring></argsstring>
+        <name>binsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="61" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1ae4716cdcee89b0f6e96f63c096add9b7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int errorflag</definition>
+        <argsstring></argsstring>
+        <name>errorflag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="62" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a67d4aaf897a65d021be1c282061c2b46" prot="private" static="no" mutable="no">
+        <type>T **</type>
+        <definition>T** pages</definition>
+        <argsstring></argsstring>
+        <name>pages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="67" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1aae6f3fdeea96793d7dc66b5ca2e9a6de" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* whichbin</definition>
+        <argsstring></argsstring>
+        <name>whichbin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="68" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a698887f18bbe405b9b67ea1224a9a41e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int npage</definition>
+        <argsstring></argsstring>
+        <name>npage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="69" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a80c4855ee8dc9d60c5deb170f4ef10b4" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* freelist</definition>
+        <argsstring></argsstring>
+        <name>freelist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="70" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a6b037a7129d8865a0362683d4ee6bc1b" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* freehead</definition>
+        <argsstring></argsstring>
+        <name>freehead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="71" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPoolChunk_1a9c4f80a3f9b0a60528a2fd6c3915ef0a" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* chunksize</definition>
+        <argsstring></argsstring>
+        <name>chunksize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="72" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPoolChunk_1a60daa98fd41e5ff09753fe55f044b453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MyPoolChunk</definition>
+        <argsstring>(int user_minchunk=1, int user_maxchunk=1, int user_nbin=1, int user_chunkperpage=1024, int user_pagedelta=1)</argsstring>
+        <name>MyPoolChunk</name>
+        <param>
+          <type>int</type>
+          <declname>user_minchunk</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>user_maxchunk</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>user_nbin</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>user_chunkperpage</declname>
+          <defval>1024</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>user_pagedelta</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a class instance and set memory pool parameters</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_minchunk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimal chunk size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_maxchunk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximal chunk size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_nbin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bins of different chunk sizes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_chunkperpage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of chunks per page </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_pagedelta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pages to allocate in one go </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="25" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.cpp" bodystart="52" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPoolChunk_1aa185474081f1f923a35914ed67077e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MyPoolChunk</definition>
+        <argsstring>()</argsstring>
+        <name>~MyPoolChunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy class instance and free all allocated memory </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="30" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.cpp" bodystart="89" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPoolChunk_1a591380d4a3a168110139f35e1d56a3c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T * get</definition>
+        <argsstring>(int &amp;index)</argsstring>
+        <name>get</name>
+        <param>
+          <type>int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return pointer/index of unused chunk of size maxchunk</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of chunk in memory pool </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to requested chunk of storage </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="34" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.cpp" bodystart="106" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPoolChunk_1a781c43c8f6e18dcb99c613292a38cc4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T * get</definition>
+        <argsstring>(int n, int &amp;index)</argsstring>
+        <name>get</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return pointer/index of unused chunk of size N</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of chunk </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of chunk in memory pool </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to requested chunk of storage </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="38" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.cpp" bodystart="132" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPoolChunk_1acf93b81dd253b533195c20ee85621412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void put</definition>
+        <argsstring>(int index)</argsstring>
+        <name>put</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Put indexed chunk back into memory pool via free list</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Memory chunk index returned by call to <ref refid="classLAMMPS__NS_1_1MyPoolChunk_1a591380d4a3a168110139f35e1d56a3c9" kindref="member">get()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="43" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.cpp" bodystart="162" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPoolChunk_1ac3fe9e82d5f4f1d55a5c104a2a5d37a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return total size of allocated pages</para>
+<para><simplesect kind="return"><para>total storage used in bytes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="47" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.cpp" bodystart="213" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPoolChunk_1a92d2adf8350ab6a66718eab4a990dffb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int status</definition>
+        <argsstring>() const</argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return error status</para>
+<para><simplesect kind="return"><para>0 if no error, 1 if invalid input, 2 if malloc() failed, 3 if chunk &gt; maxchunk </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="53" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPoolChunk_1a1184889280f27b7ebc2d2f29b3537852" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void allocate</definition>
+        <argsstring>(int ibin)</argsstring>
+        <name>allocate</name>
+        <param>
+          <type>int</type>
+          <declname>ibin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" line="74" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.cpp" bodystart="174" bodyend="206"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Templated class for storing chunks of datums in pages. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The size of the chunk may vary from call to call between the <emphasis>minchunk</emphasis> and <emphasis>maxchunk</emphasis> setting. Chunks may be returned to the pool for re-use. Chunks can be reserved in <emphasis>nbin</emphasis> different sizes between <emphasis>minchunk</emphasis> and <emphasis>maxchunk</emphasis>. The <emphasis>chunksperpage</emphasis> setting specifies how many chunks are stored on any page and the <emphasis>pagedelta</emphasis> setting determines how many pages are allocated in one go. Pages are never freed, so they can be re-used without re-allocation.</para>
+<para><simplesect kind="note"><para>This is a template class with explicit instantiation. If the class is used with a new data type a new explicit instantiation may need to be added at the end of the file <computeroutput>src/my_pool_chunk.cpp</computeroutput> to avoid symbol lookup errors. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.cpp" line="25" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_pool_chunk.h" bodystart="20" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a1184889280f27b7ebc2d2f29b3537852" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>allocate</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a2dac7bd7ff974440f5a22dea732512e3" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>binsize</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1aedf637638807a690c48d2489bea65e0a" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>chunkperpage</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a9c4f80a3f9b0a60528a2fd6c3915ef0a" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>chunksize</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1ae4716cdcee89b0f6e96f63c096add9b7" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>errorflag</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a6b037a7129d8865a0362683d4ee6bc1b" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>freehead</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a80c4855ee8dc9d60c5deb170f4ef10b4" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>freelist</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a591380d4a3a168110139f35e1d56a3c9" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>get</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a781c43c8f6e18dcb99c613292a38cc4e" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>get</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a20ba41bf9a0909d250f96c0b991be979" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>maxchunk</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a4583649cab7884fe9bc5ea5c0dcbd38e" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>minchunk</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a60daa98fd41e5ff09753fe55f044b453" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>MyPoolChunk</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1aae694388ff2578768153af8ca25b638d" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>nbin</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a9f461dbc7cb614bb1256776a60d35a67" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>nchunk</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1ad9f2000dc90e515a0dc096017e0bbf7c" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>ndatum</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a698887f18bbe405b9b67ea1224a9a41e" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>npage</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a28454b18075e20035801fe69f7b25191" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>pagedelta</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a67d4aaf897a65d021be1c282061c2b46" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>pages</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1acf93b81dd253b533195c20ee85621412" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>put</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1ac3fe9e82d5f4f1d55a5c104a2a5d37a6" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>size</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1a92d2adf8350ab6a66718eab4a990dffb" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>status</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1aae6f3fdeea96793d7dc66b5ca2e9a6de" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>whichbin</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPoolChunk_1aa185474081f1f923a35914ed67077e11" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPoolChunk</scope><name>~MyPoolChunk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

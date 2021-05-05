@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1Pointers" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::Pointers</compoundname>
+    <derivedcompoundref refid="classLAMMPS__NS_1_1Atom" prot="protected" virt="non-virtual">Atom</derivedcompoundref>
+    <derivedcompoundref refid="classLAMMPS__NS_1_1Input" prot="protected" virt="non-virtual">Input</derivedcompoundref>
+    <derivedcompoundref refid="classLAMMPS__NS_1_1PotentialFileReader" prot="protected" virt="non-virtual">PotentialFileReader</derivedcompoundref>
+    <includes refid="pointers_8h" local="no">pointers.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1ae684bcad9f36036c048c82c98ebe0124" prot="protected" static="no" mutable="no">
+        <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+        <definition>LAMMPS* lmp</definition>
+        <argsstring></argsstring>
+        <name>lmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="93" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1ae7d44a3fedbb18030b17f7355efaa51a" prot="protected" static="no" mutable="no">
+        <type>Memory *&amp;</type>
+        <definition>Memory*&amp; memory</definition>
+        <argsstring></argsstring>
+        <name>memory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="94" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1aea88ccb2b06e3754f36b34fb0cf96189" prot="protected" static="no" mutable="no">
+        <type>Error *&amp;</type>
+        <definition>Error*&amp; error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="95" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a84b1b0c460e067ca35377cc00a6c24ee" prot="protected" static="no" mutable="no">
+        <type>Universe *&amp;</type>
+        <definition>Universe*&amp; universe</definition>
+        <argsstring></argsstring>
+        <name>universe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="96" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a63a692bb965a266fe662ff32cd8d7a55" prot="protected" static="no" mutable="no">
+        <type><ref refid="classLAMMPS__NS_1_1Input" kindref="compound">Input</ref> *&amp;</type>
+        <definition>Input*&amp; input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="97" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a9efd11aaaca8132b6161fd9a1d493d08" prot="protected" static="no" mutable="no">
+        <type><ref refid="classLAMMPS__NS_1_1Atom" kindref="compound">Atom</ref> *&amp;</type>
+        <definition>Atom*&amp; atom</definition>
+        <argsstring></argsstring>
+        <name>atom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="99" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1acf806e60c520a677d68dec0720561561" prot="protected" static="no" mutable="no">
+        <type>Update *&amp;</type>
+        <definition>Update*&amp; update</definition>
+        <argsstring></argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="100" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a97444531094227dccacf1a0b18c4d2d3" prot="protected" static="no" mutable="no">
+        <type>Neighbor *&amp;</type>
+        <definition>Neighbor*&amp; neighbor</definition>
+        <argsstring></argsstring>
+        <name>neighbor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="101" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1aa5ea75ba20b2cb4da63dc2a6b1061e46" prot="protected" static="no" mutable="no">
+        <type>Comm *&amp;</type>
+        <definition>Comm*&amp; comm</definition>
+        <argsstring></argsstring>
+        <name>comm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="102" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1af405ef1458dd04eee7df078927f30b7c" prot="protected" static="no" mutable="no">
+        <type>Domain *&amp;</type>
+        <definition>Domain*&amp; domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="103" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a6a9905937a589e9d285df4c916b249f7" prot="protected" static="no" mutable="no">
+        <type>Force *&amp;</type>
+        <definition>Force*&amp; force</definition>
+        <argsstring></argsstring>
+        <name>force</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="104" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a4c4552f2c9f04b59af1021eb043498ca" prot="protected" static="no" mutable="no">
+        <type>Modify *&amp;</type>
+        <definition>Modify*&amp; modify</definition>
+        <argsstring></argsstring>
+        <name>modify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="105" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a6dd51d36ed083823454608812cedd9cb" prot="protected" static="no" mutable="no">
+        <type>Group *&amp;</type>
+        <definition>Group*&amp; group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="106" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1afffb693f47f77902f1781600a73af934" prot="protected" static="no" mutable="no">
+        <type>Output *&amp;</type>
+        <definition>Output*&amp; output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="107" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a199c4a4efed34a41f7324c5b10ce2fac" prot="protected" static="no" mutable="no">
+        <type>Timer *&amp;</type>
+        <definition>Timer*&amp; timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="108" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a71e1b0303fe5e24ccff8e718a183c629" prot="protected" static="no" mutable="no">
+        <type>MPI_Comm &amp;</type>
+        <definition>MPI_Comm&amp; world</definition>
+        <argsstring></argsstring>
+        <name>world</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="110" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a317cf3806108958cb1da08966c1ac5b0" prot="protected" static="no" mutable="no">
+        <type>FILE *&amp;</type>
+        <definition>FILE*&amp; infile</definition>
+        <argsstring></argsstring>
+        <name>infile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="111" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a97af634e6050e55facd4a5e56b847526" prot="protected" static="no" mutable="no">
+        <type>FILE *&amp;</type>
+        <definition>FILE*&amp; screen</definition>
+        <argsstring></argsstring>
+        <name>screen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="112" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a58e807d06e3eaee20008017dd6d23eae" prot="protected" static="no" mutable="no">
+        <type>FILE *&amp;</type>
+        <definition>FILE*&amp; logfile</definition>
+        <argsstring></argsstring>
+        <name>logfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="113" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a78c8c91311ef3424ea36ab6a13982ba5" prot="protected" static="no" mutable="no">
+        <type>class AtomKokkos *&amp;</type>
+        <definition>class AtomKokkos*&amp; atomKK</definition>
+        <argsstring></argsstring>
+        <name>atomKK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="115" column="19" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a1d7c56abc06dfce0a66ba0cc236dddbd" prot="protected" static="no" mutable="no">
+        <type>class MemoryKokkos *&amp;</type>
+        <definition>class MemoryKokkos*&amp; memoryKK</definition>
+        <argsstring></argsstring>
+        <name>memoryKK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="116" column="21" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1Pointers_1a79f94873f275a4c859bf63ca15a7c847" prot="protected" static="no" mutable="no">
+        <type>class Python *&amp;</type>
+        <definition>class Python*&amp; python</definition>
+        <argsstring></argsstring>
+        <name>python</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="117" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Pointers_1a2d68559319e5ae4cb8ab606f49b46fcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Pointers</definition>
+        <argsstring>(LAMMPS *ptr)</argsstring>
+        <name>Pointers</name>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="67" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="67" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1Pointers_1ab520f439fdccea6f5ee841e497c030b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ~Pointers</definition>
+        <argsstring>()</argsstring>
+        <name>~Pointers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="90" column="11" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> features. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classLAMMPS__NS_1_1Pointers" kindref="compound">Pointers</ref> class contains references to many of the pointers and members of the <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS_NS::LAMMPS</ref> class. Derived classes thus gain access to the constituent class instances in the <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> composite class and thus to the core functionality of <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref>.</para>
+<para>This kind of construct is needed, since the <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> constructor should only be run once per <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> instance and thus classes cannot be derived from <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> itself. The <ref refid="classLAMMPS__NS_1_1Pointers" kindref="compound">Pointers</ref> class constructor instead only initializes C++ references to component pointer in the <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Atom</label>
+        <link refid="classLAMMPS__NS_1_1Atom"/>
+        <childnode refid="1" relation="protected-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Pointers</label>
+        <link refid="classLAMMPS__NS_1_1Pointers"/>
+      </node>
+      <node id="3">
+        <label>Input</label>
+        <link refid="classLAMMPS__NS_1_1Input"/>
+        <childnode refid="1" relation="protected-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Atom</label>
+        <link refid="classLAMMPS__NS_1_1Atom"/>
+        <childnode refid="1" relation="protected-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LAMMPS</label>
+        <link refid="classLAMMPS__NS_1_1LAMMPS"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>atom</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Pointers</label>
+        <link refid="classLAMMPS__NS_1_1Pointers"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>atom</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>lmp</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Input</label>
+        <link refid="classLAMMPS__NS_1_1Input"/>
+        <childnode refid="1" relation="protected-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" line="65" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h" bodystart="65" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a9efd11aaaca8132b6161fd9a1d493d08" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>atom</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a78c8c91311ef3424ea36ab6a13982ba5" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>atomKK</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1aa5ea75ba20b2cb4da63dc2a6b1061e46" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>comm</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1af405ef1458dd04eee7df078927f30b7c" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>domain</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1aea88ccb2b06e3754f36b34fb0cf96189" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>error</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a6a9905937a589e9d285df4c916b249f7" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>force</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a6dd51d36ed083823454608812cedd9cb" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>group</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a317cf3806108958cb1da08966c1ac5b0" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>infile</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a63a692bb965a266fe662ff32cd8d7a55" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>input</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1ae684bcad9f36036c048c82c98ebe0124" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>lmp</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a58e807d06e3eaee20008017dd6d23eae" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>logfile</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1ae7d44a3fedbb18030b17f7355efaa51a" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>memory</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a1d7c56abc06dfce0a66ba0cc236dddbd" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>memoryKK</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a4c4552f2c9f04b59af1021eb043498ca" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>modify</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a97444531094227dccacf1a0b18c4d2d3" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>neighbor</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1afffb693f47f77902f1781600a73af934" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>output</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a2d68559319e5ae4cb8ab606f49b46fcf" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>Pointers</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a79f94873f275a4c859bf63ca15a7c847" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>python</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a97af634e6050e55facd4a5e56b847526" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>screen</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a199c4a4efed34a41f7324c5b10ce2fac" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>timer</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a84b1b0c460e067ca35377cc00a6c24ee" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>universe</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1acf806e60c520a677d68dec0720561561" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>update</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1a71e1b0303fe5e24ccff8e718a183c629" prot="protected" virt="non-virtual"><scope>LAMMPS_NS::Pointers</scope><name>world</name></member>
+      <member refid="classLAMMPS__NS_1_1Pointers_1ab520f439fdccea6f5ee841e497c030b3" prot="public" virt="virtual"><scope>LAMMPS_NS::Pointers</scope><name>~Pointers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

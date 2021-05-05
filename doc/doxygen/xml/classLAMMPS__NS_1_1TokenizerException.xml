@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1TokenizerException" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::TokenizerException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">exception</basecompoundref>
+    <derivedcompoundref refid="classLAMMPS__NS_1_1InvalidFloatException" prot="public" virt="non-virtual">InvalidFloatException</derivedcompoundref>
+    <derivedcompoundref refid="classLAMMPS__NS_1_1InvalidIntegerException" prot="public" virt="non-virtual">InvalidIntegerException</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1TokenizerException_1a36bd74109f547f7f8198faf5a12d2879" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="54" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TokenizerException_1afcd938a3385e0b950738c2e24cdbc484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TokenizerException</definition>
+        <argsstring>(const std::string &amp;msg, const std::string &amp;token)</argsstring>
+        <name>TokenizerException</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thrown during retrieving or skipping tokens</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String with error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String of the token/word that caused the error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="60" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.cpp" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TokenizerException_1a20d88c6acfda9534f0609e71cd3dacaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>~TokenizerException</definition>
+        <argsstring>()</argsstring>
+        <name>~TokenizerException</name>
+        <exceptions> throw ()</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="62" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="62" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TokenizerException_1ad62489809e3df568e973597b928d6d9b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* what</definition>
+        <argsstring>() const</argsstring>
+        <name>what</name>
+        <exceptions> throw ()</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve message describing the thrown exception <simplesect kind="return"><para>string with error message </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="67" column="23" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="67" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" line="53" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/tokenizer.h" bodystart="53" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1TokenizerException_1a36bd74109f547f7f8198faf5a12d2879" prot="private" virt="non-virtual"><scope>LAMMPS_NS::TokenizerException</scope><name>message</name></member>
+      <member refid="classLAMMPS__NS_1_1TokenizerException_1afcd938a3385e0b950738c2e24cdbc484" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TokenizerException</scope><name>TokenizerException</name></member>
+      <member refid="classLAMMPS__NS_1_1TokenizerException_1ad62489809e3df568e973597b928d6d9b" prot="public" virt="virtual"><scope>LAMMPS_NS::TokenizerException</scope><name>what</name></member>
+      <member refid="classLAMMPS__NS_1_1TokenizerException_1a20d88c6acfda9534f0609e71cd3dacaf" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TokenizerException</scope><name>~TokenizerException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

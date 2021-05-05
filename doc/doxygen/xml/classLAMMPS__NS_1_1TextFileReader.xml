@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1TextFileReader" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::TextFileReader</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1TextFileReader_1ae80f820219e45772366a2a68de6a54c4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="28" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1TextFileReader_1af204189d4aa32305fdfb1f1d1f126244" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string filetype</definition>
+        <argsstring></argsstring>
+        <name>filetype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="29" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1TextFileReader_1a5780c63dbf4d5e37d17e36ee30ea6d34" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char line[MAXLINE]</definition>
+        <argsstring>[MAXLINE]</argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="31" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1TextFileReader_1aa065f30aa9f5f9a42132c82c787ee70b" prot="private" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* fp</definition>
+        <argsstring></argsstring>
+        <name>fp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="32" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1TextFileReader_1a4af19d530fc1e1df96478f0d3e2e64d5" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int MAXLINE</definition>
+        <argsstring></argsstring>
+        <name>MAXLINE</name>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="30" column="22" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1TextFileReader_1a87625d6c23cbea82833fceab91c31bc4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ignore_comments</definition>
+        <argsstring></argsstring>
+        <name>ignore_comments</name>
+        <briefdescription>
+<para>Controls whether comments are ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="35" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TextFileReader_1a2043b5f5a6222c33ed29f356e09fa50a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TextFileReader</definition>
+        <argsstring>(const std::string &amp;filename, const std::string &amp;filetype)</argsstring>
+        <name>TextFileReader</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filetype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Class for reading and parsing text files</para>
+<para>The value of the class member variable <emphasis>ignore_comments</emphasis> controls whether any text following the pound sign (#) should be ignored (true) or not (false). Default: true, i.e. ignore. <verbatim>embed:rst
+
+*See also*
+   :cpp:class:`TextFileReader`</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of file to be read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filetype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Description of file type for error messages </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="37" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.cpp" bodystart="43" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TextFileReader_1a60ce1f5ac0e90a8deedc0f0359eacc49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TextFileReader</definition>
+        <argsstring>()</argsstring>
+        <name>~TextFileReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes the file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="38" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.cpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TextFileReader_1a13171cc94df93641fa41710249bd2828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void skip_line</definition>
+        <argsstring>()</argsstring>
+        <name>skip_line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read the next line and ignore it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="40" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.cpp" bodystart="61" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TextFileReader_1ac8028df52c806625ec32fe25eb9e87c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * next_line</definition>
+        <argsstring>(int nparams=0)</argsstring>
+        <name>next_line</name>
+        <param>
+          <type>int</type>
+          <declname>nparams</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read the next line(s) until <emphasis>nparams</emphasis> words have been read.</para>
+<para>This reads a line and counts the words in it, if the number is less than the requested number, it will read the next line, as well. Output will be a string with all read lines combined. The purpose is to somewhat replicate the reading behavior of formatted files in Fortran.</para>
+<para>If the <emphasis>ignore_comments</emphasis> class member has the value <emphasis>true</emphasis>, then any text read in is truncated at the first &apos;#&apos; character.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nparams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of words that must be read. Default: 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String with the concatenated text </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="41" column="11" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.cpp" bodystart="83" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TextFileReader_1a4c74ed481f64285779f60633e6301a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void next_dvector</definition>
+        <argsstring>(double *list, int n)</argsstring>
+        <name>next_dvector</name>
+        <param>
+          <type>double *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read lines until <emphasis>n</emphasis> doubles have been read and stored in array <emphasis>list</emphasis></para>
+<para>This reads lines from the file using the next_line() function, and splits them into floating-point numbers using the ValueTokenizer class and stores the number is the provided list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array with suitable storage for <emphasis>n</emphasis> doubles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of doubles to be read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="43" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.cpp" bodystart="138" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1TextFileReader_1a8a0ce533407ad4d77f92c807de0131b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ValueTokenizer</type>
+        <definition>ValueTokenizer next_values</definition>
+        <argsstring>(int nparams, const std::string &amp;separators=TOKENIZER_DEFAULT_SEPARATORS)</argsstring>
+        <name>next_values</name>
+        <param>
+          <type>int</type>
+          <declname>nparams</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>separators</declname>
+          <defval>TOKENIZER_DEFAULT_SEPARATORS</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read text until <emphasis>nparams</emphasis> words are read and passed to a tokenizer object for custom parsing.</para>
+<para>This reads lines from the file using the next_line() function, and splits them into floating-point numbers using the ValueTokenizer class and stores the number is the provided list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nparams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of words to be read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>separators</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String with list of separators. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ValueTokenizer object for read in text </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="44" column="20" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.cpp" bodystart="167" bodyend="169"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="27" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="27" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1ae80f820219e45772366a2a68de6a54c4" prot="private" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>filename</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1af204189d4aa32305fdfb1f1d1f126244" prot="private" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>filetype</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1aa065f30aa9f5f9a42132c82c787ee70b" prot="private" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>fp</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1a87625d6c23cbea82833fceab91c31bc4" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>ignore_comments</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1a5780c63dbf4d5e37d17e36ee30ea6d34" prot="private" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>line</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1a4af19d530fc1e1df96478f0d3e2e64d5" prot="private" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>MAXLINE</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1a4c74ed481f64285779f60633e6301a47" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>next_dvector</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1ac8028df52c806625ec32fe25eb9e87c0" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>next_line</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1a8a0ce533407ad4d77f92c807de0131b0" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>next_values</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1a13171cc94df93641fa41710249bd2828" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>skip_line</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1a2043b5f5a6222c33ed29f356e09fa50a" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>TextFileReader</name></member>
+      <member refid="classLAMMPS__NS_1_1TextFileReader_1a60ce1f5ac0e90a8deedc0f0359eacc49" prot="public" virt="non-virtual"><scope>LAMMPS_NS::TextFileReader</scope><name>~TextFileReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

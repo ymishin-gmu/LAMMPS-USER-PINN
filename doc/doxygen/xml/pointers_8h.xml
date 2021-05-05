@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pointers_8h" kind="file" language="C++">
+    <compoundname>pointers.h</compoundname>
+    <innerclass refid="classLAMMPS__NS_1_1Pointers" prot="public">LAMMPS_NS::Pointers</innerclass>
+    <innernamespace refid="namespaceLAMMPS__NS">LAMMPS_NS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>----------------------------------------------------------</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>LAMMPS<sp/>-<sp/>Large-scale<sp/>Atomic/Molecular<sp/>Massively<sp/>Parallel<sp/>Simulator</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/>http://lammps.sandia.gov,<sp/>Sandia<sp/>National<sp/>Laboratories</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>Steve<sp/>Plimpton,<sp/>sjplimp@sandia.gov</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(2003)<sp/>Sandia<sp/>Corporation.<sp/><sp/>Under<sp/>the<sp/>terms<sp/>of<sp/>Contract</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>DE-AC04-94AL85000<sp/>with<sp/>Sandia<sp/>Corporation,<sp/>the<sp/>U.S.<sp/>Government<sp/>retains</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>certain<sp/>rights<sp/>in<sp/>this<sp/>software.<sp/><sp/>This<sp/>software<sp/>is<sp/>distributed<sp/>under</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>See<sp/>the<sp/>README<sp/>file<sp/>in<sp/>the<sp/>top-level<sp/>LAMMPS<sp/>directory.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">-------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pointers<sp/>class<sp/>contains<sp/>ptrs<sp/>to<sp/>master<sp/>copy<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>fundamental<sp/>LAMMPS<sp/>class<sp/>ptrs<sp/>stored<sp/>in<sp/>lammps.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>every<sp/>LAMMPS<sp/>class<sp/>inherits<sp/>from<sp/>Pointers<sp/>to<sp/>access<sp/>lammps.h<sp/>ptrs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>these<sp/>variables<sp/>are<sp/>auto-initialized<sp/>by<sp/>Pointer<sp/>class<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*&amp;<sp/>variables<sp/>are<sp/>really<sp/>pointers<sp/>to<sp/>the<sp/>pointers<sp/>in<sp/>lammps.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&amp;<sp/>enables<sp/>them<sp/>to<sp/>be<sp/>accessed<sp/>directly<sp/>in<sp/>any<sp/>class,<sp/>e.g.<sp/>atom-&gt;x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LMP_POINTERS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LMP_POINTERS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lmptype.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>export</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpi.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>export</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragme:<sp/>export</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>export</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>export</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lammps.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>export</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utils.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>export</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;fmt/format.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>export</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">LAMMPS_NS<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>universal<sp/>defines<sp/>inside<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLERR<sp/>__FILE__,__LINE__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN(A,B)<sp/>((A)<sp/>&lt;<sp/>(B)<sp/>?<sp/>(A)<sp/>:<sp/>(B))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX(A,B)<sp/>((A)<sp/>&gt;<sp/>(B)<sp/>?<sp/>(A)<sp/>:<sp/>(B))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>enum<sp/>used<sp/>for<sp/>KOKKOS<sp/>host/device<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>ExecutionSpace{Host,Device};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>global<sp/>forward<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyPoolChunk;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyPage;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classLAMMPS__NS_1_1Pointers" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLAMMPS__NS_1_1Pointers" kindref="compound">Pointers</ref><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1Pointers" kindref="compound">Pointers</ref>(<ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref><sp/>*ptr)<sp/>:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>lmp(ptr),</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>memory(ptr-&gt;memory),</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>error(ptr-&gt;error),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>universe(ptr-&gt;universe),</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>input(ptr-&gt;input),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>atom(ptr-&gt;atom),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>update(ptr-&gt;update),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>neighbor(ptr-&gt;neighbor),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>comm(ptr-&gt;comm),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>domain(ptr-&gt;domain),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>force(ptr-&gt;force),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>modify(ptr-&gt;modify),</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>group(ptr-&gt;group),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>output(ptr-&gt;output),</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>timer(ptr-&gt;timer),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>world(ptr-&gt;world),</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>infile(ptr-&gt;infile),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>screen(ptr-&gt;screen),</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>logfile(ptr-&gt;logfile),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>atomKK(ptr-&gt;atomKK),</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>memoryKK(ptr-&gt;memoryKK),</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>python(ptr-&gt;python)<sp/>{}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classLAMMPS__NS_1_1Pointers" kindref="compound">Pointers</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref><sp/>*lmp;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>Memory<sp/>*&amp;memory;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>Error<sp/>*&amp;error;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>Universe<sp/>*&amp;universe;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1Input" kindref="compound">Input</ref><sp/>*&amp;input;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1Atom" kindref="compound">Atom</ref><sp/>*&amp;atom;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>Update<sp/>*&amp;update;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>Neighbor<sp/>*&amp;neighbor;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>Comm<sp/>*&amp;comm;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>Domain<sp/>*&amp;domain;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>Force<sp/>*&amp;force;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>Modify<sp/>*&amp;modify;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>Group<sp/>*&amp;group;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>Output<sp/>*&amp;output;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>Timer<sp/>*&amp;timer;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>MPI_Comm<sp/>&amp;world;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>FILE<sp/>*&amp;infile;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>FILE<sp/>*&amp;screen;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>FILE<sp/>*&amp;logfile;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AtomKokkos<sp/>*&amp;atomKK;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MemoryKokkos<sp/>*&amp;memoryKK;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Python<sp/>*&amp;python;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/pointers.h"/>
+  </compounddef>
+</doxygen>

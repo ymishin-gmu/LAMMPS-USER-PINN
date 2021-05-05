@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="my__page_8h" kind="file" language="C++">
+    <compoundname>my_page.h</compoundname>
+    <innerclass refid="structLAMMPS__NS_1_1HyperOneCoeff" prot="public">LAMMPS_NS::HyperOneCoeff</innerclass>
+    <innerclass refid="classLAMMPS__NS_1_1MyPage" prot="public">LAMMPS_NS::MyPage</innerclass>
+    <innernamespace refid="namespaceLAMMPS__NS">LAMMPS_NS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>----------------------------------------------------------</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>LAMMPS<sp/>-<sp/>Large-scale<sp/>Atomic/Molecular<sp/>Massively<sp/>Parallel<sp/>Simulator</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/>http://lammps.sandia.gov,<sp/>Sandia<sp/>National<sp/>Laboratories</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>Steve<sp/>Plimpton,<sp/>sjplimp@sandia.gov</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(2003)<sp/>Sandia<sp/>Corporation.<sp/><sp/>Under<sp/>the<sp/>terms<sp/>of<sp/>Contract</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>DE-AC04-94AL85000<sp/>with<sp/>Sandia<sp/>Corporation,<sp/>the<sp/>U.S.<sp/>Government<sp/>retains</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>certain<sp/>rights<sp/>in<sp/>this<sp/>software.<sp/><sp/>This<sp/>software<sp/>is<sp/>distributed<sp/>under</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>See<sp/>the<sp/>README<sp/>file<sp/>in<sp/>the<sp/>top-level<sp/>LAMMPS<sp/>directory.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">-------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/>templated<sp/>class<sp/>for<sp/>storing<sp/>chunks<sp/>of<sp/>datums<sp/>in<sp/>pages</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">-------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LAMMPS_MY_PAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAMMPS_MY_PAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lmptype.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">LAMMPS_NS<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">HyperOneCoeff<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>biascoeff;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>tagint<sp/>tag;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="31" refid="classLAMMPS__NS_1_1MyPage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLAMMPS__NS_1_1MyPage" kindref="compound">MyPage</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ndatum;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>total<sp/>#<sp/>of<sp/>stored<sp/>datums</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nchunk;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>total<sp/>#<sp/>of<sp/>stored<sp/>chunks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1MyPage_1aaea419ba80ccc8fc23bcfd0870c1e875" kindref="member">MyPage</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classLAMMPS__NS_1_1MyPage" kindref="compound">MyPage</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1MyPage_1a381c748265a923272bd332b3905a9891" kindref="member">init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>user_maxchunk=1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>user_pagesize=1024,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>user_pagedelta=1);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>T<sp/>*<ref refid="classLAMMPS__NS_1_1MyPage_1ac0fe0e7127a43512b203e64202414cab" kindref="member">get</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n=1);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classLAMMPS__NS_1_1MyPage_1a9d22e2eb992cdc9902cf841fce95564c" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/>*<ref refid="classLAMMPS__NS_1_1MyPage_1a9d22e2eb992cdc9902cf841fce95564c" kindref="member">vget</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index+maxchunk<sp/>&lt;=<sp/>pagesize)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;page[index];</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>ipage++;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ipage<sp/>==<sp/>npage)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>allocate();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(errorflag)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>page<sp/>=<sp/>pages[ipage];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;page[index];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classLAMMPS__NS_1_1MyPage_1a8b3b7dc16eae4b0445e534a37eb85806" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1MyPage_1a8b3b7dc16eae4b0445e534a37eb85806" kindref="member">vgot</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&gt;<sp/>maxchunk)<sp/>errorflag<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>ndatum<sp/>+=<sp/>n;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>nchunk++;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>+=<sp/>n;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1MyPage_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classLAMMPS__NS_1_1MyPage_1ac3fe9e82d5f4f1d55a5c104a2a5d37a6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1MyPage_1ac3fe9e82d5f4f1d55a5c104a2a5d37a6" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)npage*pagesize*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classLAMMPS__NS_1_1MyPage_1a92d2adf8350ab6a66718eab4a990dffb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1MyPage_1a92d2adf8350ab6a66718eab4a990dffb" kindref="member">status</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>errorflag;<sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>T<sp/>**pages;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>list<sp/>of<sp/>allocated<sp/>pages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>T<sp/>*page;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ptr<sp/>to<sp/>current<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npage;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>allocated<sp/>pages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ipage;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>index<sp/>of<sp/>current<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>current<sp/>index<sp/>on<sp/>current<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxchunk;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>max<sp/>#<sp/>of<sp/>datums<sp/>in<sp/>one<sp/>requested<sp/>chunk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pagesize;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>datums<sp/>in<sp/>one<sp/>page,<sp/>default<sp/>=<sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pagedelta;<sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>pages<sp/>to<sp/>allocate<sp/>at<sp/>once,<sp/>default<sp/>=<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errorflag;<sp/><sp/></highlight><highlight class="comment">//<sp/>flag<sp/>&gt;<sp/>0<sp/>if<sp/>error<sp/>has<sp/>occurred</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>=<sp/>chunk<sp/>size<sp/>exceeded<sp/>maxchunk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2<sp/>=<sp/>memory<sp/>allocation<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>allocate();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1MyPage_1a2d68be4fd20ffdd7f7a9b51579eacc2f" kindref="member">deallocate</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h"/>
+  </compounddef>
+</doxygen>

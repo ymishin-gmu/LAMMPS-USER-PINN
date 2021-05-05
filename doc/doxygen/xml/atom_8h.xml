@@ -1,0 +1,612 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="atom_8h" kind="file" language="C++">
+    <compoundname>atom.h</compoundname>
+    <innerclass refid="classLAMMPS__NS_1_1Atom" prot="public">LAMMPS_NS::Atom</innerclass>
+    <innerclass refid="structLAMMPS__NS_1_1Atom_1_1PerAtom" prot="public">LAMMPS_NS::Atom::PerAtom</innerclass>
+    <innerclass refid="structLAMMPS__NS_1_1Atom_1_1HashElem" prot="protected">LAMMPS_NS::Atom::HashElem</innerclass>
+    <innernamespace refid="namespaceLAMMPS__NS">LAMMPS_NS</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>----------------------------------------------------------</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>LAMMPS<sp/>-<sp/>Large-scale<sp/>Atomic/Molecular<sp/>Massively<sp/>Parallel<sp/>Simulator</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/>http://lammps.sandia.gov,<sp/>Sandia<sp/>National<sp/>Laboratories</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>Steve<sp/>Plimpton,<sp/>sjplimp@sandia.gov</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(2003)<sp/>Sandia<sp/>Corporation.<sp/><sp/>Under<sp/>the<sp/>terms<sp/>of<sp/>Contract</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>DE-AC04-94AL85000<sp/>with<sp/>Sandia<sp/>Corporation,<sp/>the<sp/>U.S.<sp/>Government<sp/>retains</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>certain<sp/>rights<sp/>in<sp/>this<sp/>software.<sp/><sp/>This<sp/>software<sp/>is<sp/>distributed<sp/>under</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>See<sp/>the<sp/>README<sp/>file<sp/>in<sp/>the<sp/>top-level<sp/>LAMMPS<sp/>directory.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">-------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LMP_ATOM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LMP_ATOM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pointers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">LAMMPS_NS<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>declaration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AtomVec;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classLAMMPS__NS_1_1Atom" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLAMMPS__NS_1_1Atom" kindref="compound">Atom</ref><sp/>:<sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1Pointers" kindref="compound">Pointers</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*atom_style;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>AtomVec<sp/>*avec;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal">{DOUBLE,INT,BIGINT};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal">{GROW=0,RESTART=1,BORDER=2};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal">{ATOMIC=0,MOLECULAR=1,TEMPLATE=2};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal">{MAP_NONE=0,MAP_ARRAY=1,MAP_HASH=2,MAP_YES=3};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>atom<sp/>counts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>bigint<sp/>natoms;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>total<sp/>#<sp/>of<sp/>atoms<sp/>in<sp/>system,<sp/>could<sp/>be<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>natoms<sp/>may<sp/>not<sp/>be<sp/>current<sp/>if<sp/>atoms<sp/>lost</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nlocal,nghost;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>owned<sp/>and<sp/>ghost<sp/>atoms<sp/>on<sp/>this<sp/>proc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmax;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>max<sp/>#<sp/>of<sp/>owned+ghost<sp/>in<sp/>arrays<sp/>on<sp/>this<sp/>proc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag_enable;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0/1<sp/>if<sp/>atom<sp/>ID<sp/>tags<sp/>are<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>molecular;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0<sp/>=<sp/>atomic,<sp/>1<sp/>=<sp/>standard<sp/>molecular<sp/>system,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2<sp/>=<sp/>molecule<sp/>template<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>bigint<sp/>nellipsoids;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>ellipsoids</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>bigint<sp/>nlines;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>lines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>bigint<sp/>ntris;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>triangles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>bigint<sp/>nbodies;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>bodies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>system<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>bigint<sp/>nbonds,nangles,ndihedrals,nimpropers;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ntypes,nbondtypes,nangletypes,ndihedraltypes,nimpropertypes;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bond_per_atom,angle_per_atom,dihedral_per_atom,improper_per_atom;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>extra_bond_per_atom,extra_angle_per_atom;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>extra_dihedral_per_atom,extra_improper_per_atom;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>firstgroup;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>store<sp/>atoms<sp/>in<sp/>this<sp/>group<sp/>first,<sp/>-1<sp/>if<sp/>unset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nfirst;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>atoms<sp/>in<sp/>first<sp/>group<sp/>on<sp/>this<sp/>proc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*firstgroupname;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>group-ID<sp/>to<sp/>store<sp/>first,<sp/>null<sp/>pointer<sp/>if<sp/>unset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>1st<sp/>customization<sp/>section:<sp/>customize<sp/>by<sp/>adding<sp/>new<sp/>per-atom<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>per-atom<sp/>vectors<sp/>and<sp/>arrays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>tagint<sp/>*tag;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*type,*mask;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>imageint<sp/>*image;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**x,**v,**f;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>charged<sp/>and<sp/>dipolar<sp/>particles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*rmass;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*q,**mu;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>finite-size<sp/>particles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*radius;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**omega,**angmom,**torque;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*ellipsoid,*line,*tri,*body;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>molecular<sp/>systems</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>tagint<sp/>*molecule;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*molindex,*molatom;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**nspecial;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0,1,2<sp/>=<sp/>cumulative<sp/>#<sp/>of<sp/>1-2,1-3,1-4<sp/>neighs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>tagint<sp/>**special;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IDs<sp/>of<sp/>1-2,1-3,1-4<sp/>neighs<sp/>of<sp/>each<sp/>atom</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxspecial;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>special[nlocal][maxspecial]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*num_bond;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**bond_type;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>tagint<sp/>**bond_atom;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*num_angle;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**angle_type;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>tagint<sp/>**angle_atom1,**angle_atom2,**angle_atom3;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*num_dihedral;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**dihedral_type;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>tagint<sp/>**dihedral_atom1,**dihedral_atom2,**dihedral_atom3,**dihedral_atom4;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*num_improper;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**improper_type;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>tagint<sp/>**improper_atom1,**improper_atom2,**improper_atom3,**improper_atom4;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>PERI<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*vfrac,*s0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**x0;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SPIN<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**sp,**fm,**fm_long;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>USER_EFF<sp/>and<sp/>USER-AWPMD<sp/>packages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*spin;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*eradius,*ervel,*erforce;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*ervelforce;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**cs,**csforce,**vforce;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*etag;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>USER-DPD<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*uCond,*uMech,*uChem,*uCGnew,*uCG;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*duChem;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*dpdTheta;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nspecies_dpd;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>USER-MESO<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**cc,**cc_flux;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cc<sp/>=<sp/>chemical<sp/>concentration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*edpd_temp,*edpd_flux;<sp/><sp/></highlight><highlight class="comment">//<sp/>temperature<sp/>and<sp/>heat<sp/>flux</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*vest_temp;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*edpd_cv;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>heat<sp/>capacity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cc_species;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>USER-MESONT<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*length;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*buckling;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>tagint<sp/>**bond_nt;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>USER-SMD<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*contact_radius;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**smd_data_9;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**smd_stress;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*eff_plastic_strain;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*eff_plastic_strain_rate;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*damage;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>USER-SPH<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*rho,*drho,*esph,*desph,*cv;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**vest;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>customization<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>2nd<sp/>customization<sp/>section:<sp/>customize<sp/>by<sp/>adding<sp/>new<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>identical<sp/>list<sp/>as<sp/>Atom::set_atomflag_defaults()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>most<sp/>are<sp/>existence<sp/>flags<sp/>for<sp/>per-atom<sp/>vectors<sp/>and<sp/>arrays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>if<sp/>variable<sp/>is<sp/>used,<sp/>0<sp/>if<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sphere_flag,ellipsoid_flag,line_flag,tri_flag,body_flag;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>peri_flag,electron_flag;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wavepacket_flag,sph_flag;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>molecule_flag,molindex_flag,molatom_flag;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>q_flag,mu_flag;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rmass_flag,radius_flag,omega_flag,torque_flag,angmom_flag;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vfrac_flag,spin_flag,eradius_flag,ervel_flag,erforce_flag;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cs_flag,csforce_flag,vforce_flag,ervelforce_flag,etag_flag;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rho_flag,esph_flag,cv_flag,vest_flag;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dpd_flag,edpd_flag,tdpd_flag;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mesont_flag;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SPIN<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sp_flag;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>USER-SMD<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x0_flag;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>smd_flag,damage_flag;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>contact_radius_flag,smd_data_9_flag,smd_stress_flag;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eff_plastic_strain_flag,eff_plastic_strain_rate_flag;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Peridynamics<sp/>scale<sp/>factor,<sp/>used<sp/>by<sp/>dump<sp/>cfg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pdscale;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>customization<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>per-atom<sp/>data<sp/>struct<sp/>describing<sp/>all<sp/>per-atom<sp/>vectors/arrays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">PerAtom<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*address;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*address_length;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*address_maxcols;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>datatype;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cols;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>collength;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>threadflag;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>PerAtom<sp/>*peratom;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nperatom,maxperatom;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>custom<sp/>arrays<sp/>used<sp/>by<sp/>fix<sp/>property/atom</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**ivector;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**dvector;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**iname,**dname;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nivector,ndvector;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>molecule<sp/>templates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>each<sp/>template<sp/>can<sp/>be<sp/>a<sp/>set<sp/>of<sp/>consecutive<sp/>molecules</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>each<sp/>with<sp/>same<sp/>ID<sp/>(stored<sp/>in<sp/>molecules)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>1st<sp/>molecule<sp/>in<sp/>template<sp/>stores<sp/>nset<sp/>=<sp/>#<sp/>in<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmolecule;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Molecule<sp/>**molecules;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>extra<sp/>peratom<sp/>info<sp/>in<sp/>restart<sp/>file<sp/>destined<sp/>for<sp/>fix<sp/>&amp;<sp/>diag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>**extra;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>per-type<sp/>arrays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*mass;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*mass_setflag;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>callback<sp/>ptrs<sp/>for<sp/>atom<sp/>arrays<sp/>managed<sp/>by<sp/>fix<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nextra_grow,nextra_restart,nextra_border;<sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>callbacks<sp/>of<sp/>each<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*extra_grow,*extra_restart,*extra_border;<sp/><sp/></highlight><highlight class="comment">//<sp/>index<sp/>of<sp/>fix<sp/>to<sp/>callback<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nextra_grow_max,nextra_restart_max;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>size<sp/>of<sp/>callback<sp/>lists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nextra_border_max;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nextra_store;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_style;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>style<sp/>of<sp/>atom<sp/>map:<sp/>0=none,<sp/>1=array,<sp/>2=hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_user;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>user<sp/>requested<sp/>map<sp/>style:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0<sp/>=<sp/>no<sp/>request,<sp/>1=array,<sp/>2=hash,<sp/>3=yes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>tagint<sp/>map_tag_max;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>max<sp/>atom<sp/>ID<sp/>that<sp/>map()<sp/>is<sp/>setup<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/>std::set&lt;tagint&gt;<sp/>*unique_tags;<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>to<sp/>ensure<sp/>that<sp/>bodies<sp/>have<sp/>unique<sp/>tags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>spatial<sp/>sorting<sp/>of<sp/>atoms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sortfreq;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sort<sp/>atoms<sp/>every<sp/>this<sp/>many<sp/>steps,<sp/>0<sp/>=<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>bigint<sp/>nextsort;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>timestep<sp/>to<sp/>sort<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>userbinsize;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>requested<sp/>sort<sp/>bin<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>indices<sp/>of<sp/>atoms<sp/>with<sp/>same<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*sametag;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sametag[I]<sp/>=<sp/>next<sp/>atom<sp/>with<sp/>same<sp/>ID,<sp/>-1<sp/>if<sp/>no<sp/>more</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>AtomVec<sp/>factory<sp/>types<sp/>and<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>AtomVec<sp/>*(*AtomVecCreator)(<ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref><sp/>*);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::string,AtomVecCreator&gt;<sp/>AtomVecCreatorMap;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/>AtomVecCreatorMap<sp/>*avec_map;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><ref refid="classLAMMPS__NS_1_1Atom_1a0d2e320788dddcb5ef150c187679f905" kindref="member">Atom</ref>(</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref><sp/>*);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>~<ref refid="classLAMMPS__NS_1_1Atom" kindref="compound">Atom</ref>();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>settings(</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1Atom" kindref="compound">Atom</ref><sp/>*);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>peratom_create();</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_peratom(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>threadflag=0);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_peratom_change_columns(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_peratom_vary(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*,</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>collength=0);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>create_avec(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>AtomVec<sp/>*new_avec(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init();</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setup();</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/>AtomVec<sp/>*style_match(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>modify_params(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tag_check();</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tag_extend();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag_consecutive();</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bonus_check();</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parse_data(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>deallocate_topology();</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_atoms(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>tagint,<sp/>tagint,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_vels(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>tagint);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_bonds(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*,<sp/>tagint,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_angles(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*,<sp/>tagint,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_dihedrals(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*,<sp/>tagint,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_impropers(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*,<sp/>tagint,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_bonus(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>AtomVec<sp/>*,<sp/>tagint);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_bodies(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>AtomVec<sp/>*,<sp/>tagint);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_fix_compute_variable(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>allocate_type_arrays();</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_mass(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_mass(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_mass(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_mass(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>check_mass(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>radius_consistency(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shape_consistency(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_molecule(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>find_molecule(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_molecule_atom(</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Molecule<sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>tagint);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>first_reorder();</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sort();</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_callback(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>delete_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_callback(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>find_custom(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1Atom_1af4066c0d215a97ec617f1037ca2301a7" kindref="member">add_custom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1Atom_1af9668ba3cf2115b9724c9ecc41bc3c84" kindref="member">remove_custom</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sync_modify(ExecutionSpace,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="classLAMMPS__NS_1_1Atom_1aa12f2b783db9b4523ddbf9f01d132d88" kindref="member">extract</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLAMMPS__NS_1_1Atom_1ae25da0ff714bd58c9ebf8f50e4edb81b" kindref="member">extract_datatype</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>get_map_array()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>map_array;};</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_map_size()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>map_tag_max+1;};</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_max_same()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max_same;};</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_map_maxarray()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>map_maxarray+1;};</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>placeholder<sp/>method<sp/>until<sp/>KOKKOS/AtomVec<sp/>is<sp/>refactored</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>memcheck(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>memory_usage();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>functions<sp/>for<sp/>global<sp/>to<sp/>local<sp/>ID<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>map<sp/>lookup<sp/>function<sp/>inlined<sp/>for<sp/>efficiency</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>-1<sp/>if<sp/>no<sp/>map<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map(tagint<sp/>global)<sp/>{</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(map_style<sp/>==<sp/>1)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>map_array[global];</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(map_style<sp/>==<sp/>2)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>map_find_hash(global);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>map_init(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>map_clear();</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>map_set();</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>map_one(tagint,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_style_set();</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>map_delete();</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_find_hash(tagint);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>global<sp/>to<sp/>local<sp/>ID<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*map_array;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>direct<sp/>map<sp/>via<sp/>array<sp/>that<sp/>holds<sp/>map_tag_max</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_maxarray;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>allocated<sp/>size<sp/>of<sp/>map_array<sp/>(1<sp/>larger<sp/>than<sp/>this)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">HashElem<sp/>{<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>hashed<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>tagint<sp/>global;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>key<sp/>to<sp/>search<sp/>on<sp/>=<sp/>global<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>local;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>value<sp/>associated<sp/>with<sp/>key<sp/>=<sp/>local<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>entry<sp/>in<sp/>this<sp/>bucket,<sp/>-1<sp/>if<sp/>last</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_nhash;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>entries<sp/>hash<sp/>table<sp/>can<sp/>hold</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_nused;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>actual<sp/>entries<sp/>in<sp/>hash<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_free;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ptr<sp/>to<sp/>1st<sp/>unused<sp/>entry<sp/>in<sp/>hash<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>map_nbucket;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>hash<sp/>buckets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*map_bucket;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ptr<sp/>to<sp/>1st<sp/>entry<sp/>in<sp/>each<sp/>bucket</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/>HashElem<sp/>*map_hash;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>hash<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_same;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>allocated<sp/>size<sp/>of<sp/>sametag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>spatial<sp/>sorting<sp/>of<sp/>atoms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbins;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>sorting<sp/>bins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbinx,nbiny,nbinz;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bins<sp/>in<sp/>each<sp/>dimension</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxbin;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>max<sp/>#<sp/>of<sp/>bins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxnext;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>max<sp/>size<sp/>of<sp/>next,permute</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*binhead;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1st<sp/>atom<sp/>in<sp/>each<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*next;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>atom<sp/>in<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*permute;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>permutation<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>bininvx,bininvy,bininvz;<sp/></highlight><highlight class="comment">//<sp/>inverse<sp/>actual<sp/>bin<sp/>sizes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>bboxlo[3],bboxhi[3];<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bounding<sp/>box<sp/>of<sp/>my<sp/>sub-domain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_atomflag_defaults();</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setup_sort_bins();</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next_prime(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>AtomVec<sp/>*avec_creator(<ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref><sp/>*);</highlight></codeline>
+<codeline lineno="407"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ERROR/WARNING<sp/>messages:</highlight></codeline>
+<codeline lineno="414"><highlight class="comment"></highlight></codeline>
+<codeline lineno="415"><highlight class="comment">E:<sp/>Atom<sp/>IDs<sp/>must<sp/>be<sp/>used<sp/>for<sp/>molecular<sp/>systems</highlight></codeline>
+<codeline lineno="416"><highlight class="comment"></highlight></codeline>
+<codeline lineno="417"><highlight class="comment">Atom<sp/>IDs<sp/>are<sp/>used<sp/>to<sp/>identify<sp/>and<sp/>find<sp/>partner<sp/>atoms<sp/>in<sp/>bonds.</highlight></codeline>
+<codeline lineno="418"><highlight class="comment"></highlight></codeline>
+<codeline lineno="419"><highlight class="comment">E:<sp/>Unrecognized<sp/>atom<sp/>style</highlight></codeline>
+<codeline lineno="420"><highlight class="comment"></highlight></codeline>
+<codeline lineno="421"><highlight class="comment">The<sp/>choice<sp/>of<sp/>atom<sp/>style<sp/>is<sp/>unknown.</highlight></codeline>
+<codeline lineno="422"><highlight class="comment"></highlight></codeline>
+<codeline lineno="423"><highlight class="comment">E:<sp/>Could<sp/>not<sp/>find<sp/>atom_modify<sp/>first<sp/>group<sp/>ID</highlight></codeline>
+<codeline lineno="424"><highlight class="comment"></highlight></codeline>
+<codeline lineno="425"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="426"><highlight class="comment"></highlight></codeline>
+<codeline lineno="427"><highlight class="comment">E:<sp/>Illegal<sp/>...<sp/>command</highlight></codeline>
+<codeline lineno="428"><highlight class="comment"></highlight></codeline>
+<codeline lineno="429"><highlight class="comment">Self-explanatory.<sp/><sp/>Check<sp/>the<sp/>input<sp/>script<sp/>syntax<sp/>and<sp/>compare<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="430"><highlight class="comment">documentation<sp/>for<sp/>the<sp/>command.<sp/><sp/>You<sp/>can<sp/>use<sp/>-echo<sp/>screen<sp/>as<sp/>a</highlight></codeline>
+<codeline lineno="431"><highlight class="comment">command-line<sp/>option<sp/>when<sp/>running<sp/>LAMMPS<sp/>to<sp/>see<sp/>the<sp/>offending<sp/>line.</highlight></codeline>
+<codeline lineno="432"><highlight class="comment"></highlight></codeline>
+<codeline lineno="433"><highlight class="comment">E:<sp/>Atom_modify<sp/>id<sp/>command<sp/>after<sp/>simulation<sp/>box<sp/>is<sp/>defined</highlight></codeline>
+<codeline lineno="434"><highlight class="comment"></highlight></codeline>
+<codeline lineno="435"><highlight class="comment">The<sp/>atom_modify<sp/>id<sp/>command<sp/>cannot<sp/>be<sp/>used<sp/>after<sp/>a<sp/>read_data,</highlight></codeline>
+<codeline lineno="436"><highlight class="comment">read_restart,<sp/>or<sp/>create_box<sp/>command.</highlight></codeline>
+<codeline lineno="437"><highlight class="comment"></highlight></codeline>
+<codeline lineno="438"><highlight class="comment">E:<sp/>Atom_modify<sp/>map<sp/>command<sp/>after<sp/>simulation<sp/>box<sp/>is<sp/>defined</highlight></codeline>
+<codeline lineno="439"><highlight class="comment"></highlight></codeline>
+<codeline lineno="440"><highlight class="comment">The<sp/>atom_modify<sp/>map<sp/>command<sp/>cannot<sp/>be<sp/>used<sp/>after<sp/>a<sp/>read_data,</highlight></codeline>
+<codeline lineno="441"><highlight class="comment">read_restart,<sp/>or<sp/>create_box<sp/>command.</highlight></codeline>
+<codeline lineno="442"><highlight class="comment"></highlight></codeline>
+<codeline lineno="443"><highlight class="comment">E:<sp/>Atom_modify<sp/>sort<sp/>and<sp/>first<sp/>options<sp/>cannot<sp/>be<sp/>used<sp/>together</highlight></codeline>
+<codeline lineno="444"><highlight class="comment"></highlight></codeline>
+<codeline lineno="445"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="446"><highlight class="comment"></highlight></codeline>
+<codeline lineno="447"><highlight class="comment">E:<sp/>One<sp/>or<sp/>more<sp/>Atom<sp/>IDs<sp/>is<sp/>negative</highlight></codeline>
+<codeline lineno="448"><highlight class="comment"></highlight></codeline>
+<codeline lineno="449"><highlight class="comment">Atom<sp/>IDs<sp/>must<sp/>be<sp/>positive<sp/>integers.</highlight></codeline>
+<codeline lineno="450"><highlight class="comment"></highlight></codeline>
+<codeline lineno="451"><highlight class="comment">E:<sp/>One<sp/>or<sp/>more<sp/>atom<sp/>IDs<sp/>is<sp/>too<sp/>big</highlight></codeline>
+<codeline lineno="452"><highlight class="comment"></highlight></codeline>
+<codeline lineno="453"><highlight class="comment">The<sp/>limit<sp/>on<sp/>atom<sp/>IDs<sp/>is<sp/>set<sp/>by<sp/>the<sp/>SMALLBIG,<sp/>BIGBIG,<sp/>SMALLSMALL</highlight></codeline>
+<codeline lineno="454"><highlight class="comment">setting<sp/>in<sp/>your<sp/>Makefile.<sp/><sp/>See<sp/>Section_start<sp/>2.2<sp/>of<sp/>the<sp/>manual<sp/>for</highlight></codeline>
+<codeline lineno="455"><highlight class="comment">more<sp/>details.</highlight></codeline>
+<codeline lineno="456"><highlight class="comment"></highlight></codeline>
+<codeline lineno="457"><highlight class="comment">E:<sp/>One<sp/>or<sp/>more<sp/>atom<sp/>IDs<sp/>is<sp/>zero</highlight></codeline>
+<codeline lineno="458"><highlight class="comment"></highlight></codeline>
+<codeline lineno="459"><highlight class="comment">Either<sp/>all<sp/>atoms<sp/>IDs<sp/>must<sp/>be<sp/>zero<sp/>or<sp/>none<sp/>of<sp/>them.</highlight></codeline>
+<codeline lineno="460"><highlight class="comment"></highlight></codeline>
+<codeline lineno="461"><highlight class="comment">E:<sp/>Non-zero<sp/>atom<sp/>IDs<sp/>with<sp/>atom_modify<sp/>id<sp/>=<sp/>no</highlight></codeline>
+<codeline lineno="462"><highlight class="comment"></highlight></codeline>
+<codeline lineno="463"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="464"><highlight class="comment"></highlight></codeline>
+<codeline lineno="465"><highlight class="comment">E:<sp/>All<sp/>atom<sp/>IDs<sp/>=<sp/>0<sp/>but<sp/>atom_modify<sp/>id<sp/>=<sp/>yes</highlight></codeline>
+<codeline lineno="466"><highlight class="comment"></highlight></codeline>
+<codeline lineno="467"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="468"><highlight class="comment"></highlight></codeline>
+<codeline lineno="469"><highlight class="comment">E:<sp/>Duplicate<sp/>atom<sp/>IDs<sp/>exist</highlight></codeline>
+<codeline lineno="470"><highlight class="comment"></highlight></codeline>
+<codeline lineno="471"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="472"><highlight class="comment"></highlight></codeline>
+<codeline lineno="473"><highlight class="comment">E:<sp/>New<sp/>atom<sp/>IDs<sp/>exceed<sp/>maximum<sp/>allowed<sp/>ID</highlight></codeline>
+<codeline lineno="474"><highlight class="comment"></highlight></codeline>
+<codeline lineno="475"><highlight class="comment">See<sp/>the<sp/>setting<sp/>for<sp/>tagint<sp/>in<sp/>the<sp/>src/lmptype.h<sp/>file.</highlight></codeline>
+<codeline lineno="476"><highlight class="comment"></highlight></codeline>
+<codeline lineno="477"><highlight class="comment">E:<sp/>Incorrect<sp/>atom<sp/>format<sp/>in<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="478"><highlight class="comment"></highlight></codeline>
+<codeline lineno="479"><highlight class="comment">Number<sp/>of<sp/>values<sp/>per<sp/>atom<sp/>line<sp/>in<sp/>the<sp/>data<sp/>file<sp/>is<sp/>not<sp/>consistent<sp/>with</highlight></codeline>
+<codeline lineno="480"><highlight class="comment">the<sp/>atom<sp/>style.</highlight></codeline>
+<codeline lineno="481"><highlight class="comment"></highlight></codeline>
+<codeline lineno="482"><highlight class="comment">E:<sp/>Incorrect<sp/>format<sp/>of<sp/>...<sp/>section<sp/>in<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="483"><highlight class="comment"></highlight></codeline>
+<codeline lineno="484"><highlight class="comment">Number<sp/>or<sp/>type<sp/>of<sp/>values<sp/>per<sp/>line<sp/>in<sp/>the<sp/>given<sp/>section<sp/>of<sp/>the<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="485"><highlight class="comment">is<sp/>not<sp/>consistent<sp/>with<sp/>the<sp/>requirements<sp/>for<sp/>this<sp/>section.</highlight></codeline>
+<codeline lineno="486"><highlight class="comment"></highlight></codeline>
+<codeline lineno="487"><highlight class="comment">E:<sp/>Invalid<sp/>atom<sp/>type<sp/>in<sp/>Atoms<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="488"><highlight class="comment"></highlight></codeline>
+<codeline lineno="489"><highlight class="comment">Atom<sp/>types<sp/>must<sp/>range<sp/>from<sp/>1<sp/>to<sp/>specified<sp/>#<sp/>of<sp/>types.</highlight></codeline>
+<codeline lineno="490"><highlight class="comment"></highlight></codeline>
+<codeline lineno="491"><highlight class="comment">E:<sp/>Incorrect<sp/>velocity<sp/>format<sp/>in<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="492"><highlight class="comment"></highlight></codeline>
+<codeline lineno="493"><highlight class="comment">Each<sp/>atom<sp/>style<sp/>defines<sp/>a<sp/>format<sp/>for<sp/>the<sp/>Velocity<sp/>section</highlight></codeline>
+<codeline lineno="494"><highlight class="comment">of<sp/>the<sp/>data<sp/>file.<sp/><sp/>The<sp/>read-in<sp/>lines<sp/>do<sp/>not<sp/>match.</highlight></codeline>
+<codeline lineno="495"><highlight class="comment"></highlight></codeline>
+<codeline lineno="496"><highlight class="comment">E:<sp/>Invalid<sp/>atom<sp/>ID<sp/>in<sp/>Velocities<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="497"><highlight class="comment"></highlight></codeline>
+<codeline lineno="498"><highlight class="comment">Atom<sp/>IDs<sp/>must<sp/>be<sp/>positive<sp/>integers<sp/>and<sp/>within<sp/>range<sp/>of<sp/>defined</highlight></codeline>
+<codeline lineno="499"><highlight class="comment">atoms.</highlight></codeline>
+<codeline lineno="500"><highlight class="comment"></highlight></codeline>
+<codeline lineno="501"><highlight class="comment">E:<sp/>Invalid<sp/>atom<sp/>ID<sp/>in<sp/>Bonds<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="502"><highlight class="comment"></highlight></codeline>
+<codeline lineno="503"><highlight class="comment">Atom<sp/>IDs<sp/>must<sp/>be<sp/>positive<sp/>integers<sp/>and<sp/>within<sp/>range<sp/>of<sp/>defined</highlight></codeline>
+<codeline lineno="504"><highlight class="comment">atoms.</highlight></codeline>
+<codeline lineno="505"><highlight class="comment"></highlight></codeline>
+<codeline lineno="506"><highlight class="comment">E:<sp/>Invalid<sp/>bond<sp/>type<sp/>in<sp/>Bonds<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="507"><highlight class="comment"></highlight></codeline>
+<codeline lineno="508"><highlight class="comment">Bond<sp/>type<sp/>must<sp/>be<sp/>positive<sp/>integer<sp/>and<sp/>within<sp/>range<sp/>of<sp/>specified<sp/>bond</highlight></codeline>
+<codeline lineno="509"><highlight class="comment">types.</highlight></codeline>
+<codeline lineno="510"><highlight class="comment"></highlight></codeline>
+<codeline lineno="511"><highlight class="comment">E:<sp/>Invalid<sp/>atom<sp/>ID<sp/>in<sp/>Angles<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="512"><highlight class="comment"></highlight></codeline>
+<codeline lineno="513"><highlight class="comment">Atom<sp/>IDs<sp/>must<sp/>be<sp/>positive<sp/>integers<sp/>and<sp/>within<sp/>range<sp/>of<sp/>defined</highlight></codeline>
+<codeline lineno="514"><highlight class="comment">atoms.</highlight></codeline>
+<codeline lineno="515"><highlight class="comment"></highlight></codeline>
+<codeline lineno="516"><highlight class="comment">E:<sp/>Invalid<sp/>angle<sp/>type<sp/>in<sp/>Angles<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="517"><highlight class="comment"></highlight></codeline>
+<codeline lineno="518"><highlight class="comment">Angle<sp/>type<sp/>must<sp/>be<sp/>positive<sp/>integer<sp/>and<sp/>within<sp/>range<sp/>of<sp/>specified<sp/>angle</highlight></codeline>
+<codeline lineno="519"><highlight class="comment">types.</highlight></codeline>
+<codeline lineno="520"><highlight class="comment"></highlight></codeline>
+<codeline lineno="521"><highlight class="comment">E:<sp/>Invalid<sp/>atom<sp/>ID<sp/>in<sp/>Dihedrals<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="522"><highlight class="comment"></highlight></codeline>
+<codeline lineno="523"><highlight class="comment">Atom<sp/>IDs<sp/>must<sp/>be<sp/>positive<sp/>integers<sp/>and<sp/>within<sp/>range<sp/>of<sp/>defined</highlight></codeline>
+<codeline lineno="524"><highlight class="comment">atoms.</highlight></codeline>
+<codeline lineno="525"><highlight class="comment"></highlight></codeline>
+<codeline lineno="526"><highlight class="comment">E:<sp/>Invalid<sp/>dihedral<sp/>type<sp/>in<sp/>Dihedrals<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="527"><highlight class="comment"></highlight></codeline>
+<codeline lineno="528"><highlight class="comment">Dihedral<sp/>type<sp/>must<sp/>be<sp/>positive<sp/>integer<sp/>and<sp/>within<sp/>range<sp/>of<sp/>specified</highlight></codeline>
+<codeline lineno="529"><highlight class="comment">dihedral<sp/>types.</highlight></codeline>
+<codeline lineno="530"><highlight class="comment"></highlight></codeline>
+<codeline lineno="531"><highlight class="comment">E:<sp/>Invalid<sp/>atom<sp/>ID<sp/>in<sp/>Impropers<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="532"><highlight class="comment"></highlight></codeline>
+<codeline lineno="533"><highlight class="comment">Atom<sp/>IDs<sp/>must<sp/>be<sp/>positive<sp/>integers<sp/>and<sp/>within<sp/>range<sp/>of<sp/>defined</highlight></codeline>
+<codeline lineno="534"><highlight class="comment">atoms.</highlight></codeline>
+<codeline lineno="535"><highlight class="comment"></highlight></codeline>
+<codeline lineno="536"><highlight class="comment">E:<sp/>Invalid<sp/>improper<sp/>type<sp/>in<sp/>Impropers<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="537"><highlight class="comment"></highlight></codeline>
+<codeline lineno="538"><highlight class="comment">Improper<sp/>type<sp/>must<sp/>be<sp/>positive<sp/>integer<sp/>and<sp/>within<sp/>range<sp/>of<sp/>specified</highlight></codeline>
+<codeline lineno="539"><highlight class="comment">improper<sp/>types.</highlight></codeline>
+<codeline lineno="540"><highlight class="comment"></highlight></codeline>
+<codeline lineno="541"><highlight class="comment">E:<sp/>Incorrect<sp/>bonus<sp/>data<sp/>format<sp/>in<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="542"><highlight class="comment"></highlight></codeline>
+<codeline lineno="543"><highlight class="comment">See<sp/>the<sp/>read_data<sp/>doc<sp/>page<sp/>for<sp/>a<sp/>description<sp/>of<sp/>how<sp/>various<sp/>kinds<sp/>of</highlight></codeline>
+<codeline lineno="544"><highlight class="comment">bonus<sp/>data<sp/>must<sp/>be<sp/>formatted<sp/>for<sp/>certain<sp/>atom<sp/>styles.</highlight></codeline>
+<codeline lineno="545"><highlight class="comment"></highlight></codeline>
+<codeline lineno="546"><highlight class="comment">E:<sp/>Invalid<sp/>atom<sp/>ID<sp/>in<sp/>Bonus<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="547"><highlight class="comment"></highlight></codeline>
+<codeline lineno="548"><highlight class="comment">Atom<sp/>IDs<sp/>must<sp/>be<sp/>positive<sp/>integers<sp/>and<sp/>within<sp/>range<sp/>of<sp/>defined</highlight></codeline>
+<codeline lineno="549"><highlight class="comment">atoms.</highlight></codeline>
+<codeline lineno="550"><highlight class="comment"></highlight></codeline>
+<codeline lineno="551"><highlight class="comment">E:<sp/>Invalid<sp/>atom<sp/>ID<sp/>in<sp/>Bodies<sp/>section<sp/>of<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="552"><highlight class="comment"></highlight></codeline>
+<codeline lineno="553"><highlight class="comment">Atom<sp/>IDs<sp/>must<sp/>be<sp/>positive<sp/>integers<sp/>and<sp/>within<sp/>range<sp/>of<sp/>defined</highlight></codeline>
+<codeline lineno="554"><highlight class="comment">atoms.</highlight></codeline>
+<codeline lineno="555"><highlight class="comment"></highlight></codeline>
+<codeline lineno="556"><highlight class="comment">E:<sp/>Reuse<sp/>of<sp/>molecule<sp/>template<sp/>ID</highlight></codeline>
+<codeline lineno="557"><highlight class="comment"></highlight></codeline>
+<codeline lineno="558"><highlight class="comment">The<sp/>template<sp/>IDs<sp/>must<sp/>be<sp/>unique.</highlight></codeline>
+<codeline lineno="559"><highlight class="comment"></highlight></codeline>
+<codeline lineno="560"><highlight class="comment">E:<sp/>Atom<sp/>sort<sp/>did<sp/>not<sp/>operate<sp/>correctly</highlight></codeline>
+<codeline lineno="561"><highlight class="comment"></highlight></codeline>
+<codeline lineno="562"><highlight class="comment">This<sp/>is<sp/>an<sp/>internal<sp/>LAMMPS<sp/>error.<sp/><sp/>Please<sp/>report<sp/>it<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="563"><highlight class="comment">developers.</highlight></codeline>
+<codeline lineno="564"><highlight class="comment"></highlight></codeline>
+<codeline lineno="565"><highlight class="comment">E:<sp/>Too<sp/>many<sp/>atom<sp/>sorting<sp/>bins</highlight></codeline>
+<codeline lineno="566"><highlight class="comment"></highlight></codeline>
+<codeline lineno="567"><highlight class="comment">This<sp/>is<sp/>likely<sp/>due<sp/>to<sp/>an<sp/>immense<sp/>simulation<sp/>box<sp/>that<sp/>has<sp/>blown<sp/>up</highlight></codeline>
+<codeline lineno="568"><highlight class="comment">to<sp/>a<sp/>large<sp/>size.</highlight></codeline>
+<codeline lineno="569"><highlight class="comment"></highlight></codeline>
+<codeline lineno="570"><highlight class="comment">U:<sp/>Cannot<sp/>set<sp/>mass<sp/>for<sp/>this<sp/>atom<sp/>style</highlight></codeline>
+<codeline lineno="571"><highlight class="comment"></highlight></codeline>
+<codeline lineno="572"><highlight class="comment">This<sp/>atom<sp/>style<sp/>does<sp/>not<sp/>support<sp/>mass<sp/>settings<sp/>for<sp/>each<sp/>atom<sp/>type.</highlight></codeline>
+<codeline lineno="573"><highlight class="comment">Instead<sp/>they<sp/>are<sp/>defined<sp/>on<sp/>a<sp/>per-atom<sp/>basis<sp/>in<sp/>the<sp/>data<sp/>file.</highlight></codeline>
+<codeline lineno="574"><highlight class="comment"></highlight></codeline>
+<codeline lineno="575"><highlight class="comment">U:<sp/>Invalid<sp/>mass<sp/>line<sp/>in<sp/>data<sp/>file</highlight></codeline>
+<codeline lineno="576"><highlight class="comment"></highlight></codeline>
+<codeline lineno="577"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="578"><highlight class="comment"></highlight></codeline>
+<codeline lineno="579"><highlight class="comment">U:<sp/>Invalid<sp/>type<sp/>for<sp/>mass<sp/>set</highlight></codeline>
+<codeline lineno="580"><highlight class="comment"></highlight></codeline>
+<codeline lineno="581"><highlight class="comment">Mass<sp/>command<sp/>must<sp/>set<sp/>a<sp/>type<sp/>from<sp/>1-N<sp/>where<sp/>N<sp/>is<sp/>the<sp/>number<sp/>of<sp/>atom</highlight></codeline>
+<codeline lineno="582"><highlight class="comment">types.</highlight></codeline>
+<codeline lineno="583"><highlight class="comment"></highlight></codeline>
+<codeline lineno="584"><highlight class="comment">U:<sp/>Invalid<sp/>mass<sp/>value</highlight></codeline>
+<codeline lineno="585"><highlight class="comment"></highlight></codeline>
+<codeline lineno="586"><highlight class="comment">Self-explanatory.</highlight></codeline>
+<codeline lineno="587"><highlight class="comment"></highlight></codeline>
+<codeline lineno="588"><highlight class="comment">U:<sp/>All<sp/>masses<sp/>are<sp/>not<sp/>set</highlight></codeline>
+<codeline lineno="589"><highlight class="comment"></highlight></codeline>
+<codeline lineno="590"><highlight class="comment">For<sp/>atom<sp/>styles<sp/>that<sp/>define<sp/>masses<sp/>for<sp/>each<sp/>atom<sp/>type,<sp/>all<sp/>masses<sp/>must</highlight></codeline>
+<codeline lineno="591"><highlight class="comment">be<sp/>set<sp/>in<sp/>the<sp/>data<sp/>file<sp/>or<sp/>by<sp/>the<sp/>mass<sp/>command<sp/>before<sp/>running<sp/>a</highlight></codeline>
+<codeline lineno="592"><highlight class="comment">simulation.<sp/><sp/>They<sp/>must<sp/>also<sp/>be<sp/>set<sp/>before<sp/>using<sp/>the<sp/>velocity</highlight></codeline>
+<codeline lineno="593"><highlight class="comment">command.</highlight></codeline>
+<codeline lineno="594"><highlight class="comment"></highlight></codeline>
+<codeline lineno="595"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h"/>
+  </compounddef>
+</doxygen>

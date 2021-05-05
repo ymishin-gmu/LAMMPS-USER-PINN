@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1MyPage" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::MyPage</compoundname>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1ad9f2000dc90e515a0dc096017e0bbf7c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ndatum</definition>
+        <argsstring></argsstring>
+        <name>ndatum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="33" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a9f461dbc7cb614bb1256776a60d35a67" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nchunk</definition>
+        <argsstring></argsstring>
+        <name>nchunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="34" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a67d4aaf897a65d021be1c282061c2b46" prot="private" static="no" mutable="no">
+        <type>T **</type>
+        <definition>T** pages</definition>
+        <argsstring></argsstring>
+        <name>pages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="96" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a3b76c8087a9bc16f4b6b4445a898123c" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* page</definition>
+        <argsstring></argsstring>
+        <name>page</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="97" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a698887f18bbe405b9b67ea1224a9a41e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int npage</definition>
+        <argsstring></argsstring>
+        <name>npage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="98" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a497ebd39c16909da9191e7c8094a9a27" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ipage</definition>
+        <argsstring></argsstring>
+        <name>ipage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="99" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a750b5d744c39a06bfb13e6eb010e35d0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="100" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a20ba41bf9a0909d250f96c0b991be979" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxchunk</definition>
+        <argsstring></argsstring>
+        <name>maxchunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="102" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a6db0a2e852be90d21e5869d2cafa40d2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pagesize</definition>
+        <argsstring></argsstring>
+        <name>pagesize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="103" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1a28454b18075e20035801fe69f7b25191" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pagedelta</definition>
+        <argsstring></argsstring>
+        <name>pagedelta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="104" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1MyPage_1ae4716cdcee89b0f6e96f63c096add9b7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int errorflag</definition>
+        <argsstring></argsstring>
+        <name>errorflag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="106" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1aaea419ba80ccc8fc23bcfd0870c1e875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MyPage</definition>
+        <argsstring>()</argsstring>
+        <name>MyPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a class instance</para>
+<para>Need to call <ref refid="classLAMMPS__NS_1_1MyPage_1a381c748265a923272bd332b3905a9891" kindref="member">init()</ref> before use to define allocation settings </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="35" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1a11d4266147c2cfae0be91fd9e5689a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~MyPage</definition>
+        <argsstring>()</argsstring>
+        <name>~MyPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="36" column="11" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.cpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1a381c748265a923272bd332b3905a9891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int init</definition>
+        <argsstring>(int user_maxchunk=1, int user_pagesize=1024, int user_pagedelta=1)</argsstring>
+        <name>init</name>
+        <param>
+          <type>int</type>
+          <declname>user_maxchunk</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>user_pagesize</declname>
+          <defval>1024</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>user_pagedelta</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(Re-)initialize the set of pages and allocation parameters.</para>
+<para>This also frees all previously allocated storage and allocates the first page(s).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_maxchunk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected maximum number of items for one chunk </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_pagesize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items on a single memory page </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_pagedelta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pages to allocate with one malloc </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if there were invalid parameters, 2 if there was an allocation error or 0 if successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="38" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.cpp" bodystart="82" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1ac0fe0e7127a43512b203e64202414cab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T * get</definition>
+        <argsstring>(int n=1)</argsstring>
+        <name>get</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to location that can store N items.</para>
+<para>This will allocate more pages as needed. If the parameter <emphasis>N</emphasis> is larger than the <emphasis>maxchunk</emphasis> setting an error is flagged.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of items for which storage is requested </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>memory location or null pointer, if error or allocation failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="41" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.cpp" bodystart="113" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1a9d22e2eb992cdc9902cf841fce95564c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* vget</definition>
+        <argsstring>()</argsstring>
+        <name>vget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get pointer to location that can store <emphasis>maxchunk</emphasis> items.</para>
+<para>This will return the same pointer as the previous call to this function unless <ref refid="classLAMMPS__NS_1_1MyPage_1a8b3b7dc16eae4b0445e534a37eb85806" kindref="member">vgot()</ref> is called afterwards to record how many items of the chunk were actually used.</para>
+<para><simplesect kind="return"><para>pointer to chunk of memory or null pointer if run out of memory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="51" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1a8b3b7dc16eae4b0445e534a37eb85806" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void vgot</definition>
+        <argsstring>(int n)</argsstring>
+        <name>vgot</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark <emphasis>N</emphasis> items as used of the chunk reserved with a preceding call to <ref refid="classLAMMPS__NS_1_1MyPage_1a9d22e2eb992cdc9902cf841fce95564c" kindref="member">vget()</ref>.</para>
+<para>This will advance the internal pointer inside the current memory page. It is not necessary to call this function for <emphasis>N</emphasis> = 0, that is the reserved storage was not used. A following call to <ref refid="classLAMMPS__NS_1_1MyPage_1a9d22e2eb992cdc9902cf841fce95564c" kindref="member">vget()</ref> will then reserve the same location again. It is an error if <emphasis>N</emphasis> &gt; <emphasis>maxchunk</emphasis>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items used in previously reserved chunk </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="72" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset state of memory pool without freeing any memory </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="79" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.cpp" bodystart="143" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1ac3fe9e82d5f4f1d55a5c104a2a5d37a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return total size of allocated pages</para>
+<para><simplesect kind="return"><para>total storage used in bytes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="85" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1a92d2adf8350ab6a66718eab4a990dffb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int status</definition>
+        <argsstring>() const</argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return error status</para>
+<para><simplesect kind="return"><para>0 if no error, 1 requested chunk size &gt; maxchunk, 2 if malloc failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="93" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1acaefe811b78a2fdc4a0dba0c4029c3ef" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void allocate</definition>
+        <argsstring>()</argsstring>
+        <name>allocate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="109" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.cpp" bodystart="153" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1MyPage_1a2d68be4fd20ffdd7f7a9b51579eacc2f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deallocate</definition>
+        <argsstring>()</argsstring>
+        <name>deallocate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free all allocated pages of this class instance </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" line="110" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.cpp" bodystart="177" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Templated class for storing chunks of datums in pages. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The size of the chunk may vary from call to call, but must be less or equal than the <emphasis>maxchunk</emphasis> setting. The chunks are not returnable like with malloc() (i.e. you cannot call free() on them individually). One can only reset and start over. The purpose of this class is to replace many small memory allocations via malloc() with a few large ones. Since the pages are never freed until the class is re-initialized, they can be re-used without having to re-allocate them by calling the <ref refid="classLAMMPS__NS_1_1MyPage_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset()</ref> method.</para>
+<para>The settings <emphasis>maxchunk</emphasis>, <emphasis>pagesize</emphasis>, and <emphasis>pagedelta</emphasis> control the memory allocation strategy. The <emphasis>maxchunk</emphasis> value represents the expected largest number of items per chunk. If there is less space left on the current page, a new page is allocated for the next chunk. The <emphasis>pagesize</emphasis> value represents how many items can fit on a single page. It should have space for multiple chunks of size <emphasis>maxchunk</emphasis>. The combination of these two parameters determines how much memory is wasted by either switching to the next page too soon or allocating too large pages that never get properly used. It is an error, if a requested chunk is larger than <emphasis>maxchunk</emphasis>. The <emphasis>pagedelta</emphasis> parameter determines how many pages are allocated in one go. In combination with the <emphasis>pagesize</emphasis> setting, this determines how often blocks of memory get allocated (fewer allocations will result in faster execution).</para>
+<para><simplesect kind="note"><para>This is a template class with explicit instantiation. If the class is used with a new data type a new explicit instantiation may need to be added at the end of the file <computeroutput>src/my_page.cpp</computeroutput> to avoid symbol lookup errors. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.cpp" line="24" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/my_page.h" bodystart="31" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1MyPage_1acaefe811b78a2fdc4a0dba0c4029c3ef" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>allocate</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a2d68be4fd20ffdd7f7a9b51579eacc2f" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>deallocate</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1ae4716cdcee89b0f6e96f63c096add9b7" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>errorflag</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1ac0fe0e7127a43512b203e64202414cab" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>get</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a750b5d744c39a06bfb13e6eb010e35d0" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>index</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a381c748265a923272bd332b3905a9891" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>init</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a497ebd39c16909da9191e7c8094a9a27" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>ipage</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a20ba41bf9a0909d250f96c0b991be979" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>maxchunk</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1aaea419ba80ccc8fc23bcfd0870c1e875" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>MyPage</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a9f461dbc7cb614bb1256776a60d35a67" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>nchunk</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1ad9f2000dc90e515a0dc096017e0bbf7c" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>ndatum</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a698887f18bbe405b9b67ea1224a9a41e" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>npage</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a3b76c8087a9bc16f4b6b4445a898123c" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>page</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a28454b18075e20035801fe69f7b25191" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>pagedelta</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a67d4aaf897a65d021be1c282061c2b46" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>pages</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a6db0a2e852be90d21e5869d2cafa40d2" prot="private" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>pagesize</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>reset</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1ac3fe9e82d5f4f1d55a5c104a2a5d37a6" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>size</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a92d2adf8350ab6a66718eab4a990dffb" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>status</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a9d22e2eb992cdc9902cf841fce95564c" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>vget</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a8b3b7dc16eae4b0445e534a37eb85806" prot="public" virt="non-virtual"><scope>LAMMPS_NS::MyPage</scope><name>vgot</name></member>
+      <member refid="classLAMMPS__NS_1_1MyPage_1a11d4266147c2cfae0be91fd9e5689a49" prot="public" virt="virtual"><scope>LAMMPS_NS::MyPage</scope><name>~MyPage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structLAMMPS__NS_1_1Atom_1_1HashElem" kind="struct" language="C++" prot="protected">
+    <compoundname>LAMMPS_NS::Atom::HashElem</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1HashElem_1a5a22decb137e142d73d80283e495b435" prot="public" static="no" mutable="no">
+        <type>tagint</type>
+        <definition>tagint global</definition>
+        <argsstring></argsstring>
+        <name>global</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="376" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1HashElem_1a9f68a8b89ea40c80bb0e963a2508e387" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int local</definition>
+        <argsstring></argsstring>
+        <name>local</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="377" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1HashElem_1a142a1b51e133e50c0a72b175958ac412" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="378" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="375" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="375" bodyend="379"/>
+    <listofallmembers>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1HashElem_1a5a22decb137e142d73d80283e495b435" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::HashElem</scope><name>global</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1HashElem_1a9f68a8b89ea40c80bb0e963a2508e387" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::HashElem</scope><name>local</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1HashElem_1a142a1b51e133e50c0a72b175958ac412" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::HashElem</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

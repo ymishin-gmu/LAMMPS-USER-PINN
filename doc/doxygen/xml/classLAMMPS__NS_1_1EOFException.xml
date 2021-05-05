@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1EOFException" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::EOFException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">FileReaderException</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1EOFException_1a6b34be8387d0bd2624cd9732d4f938d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EOFException</definition>
+        <argsstring>(const std::string &amp;msg)</argsstring>
+        <name>EOFException</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="63" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="63" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" line="61" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/text_file_reader.h" bodystart="61" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1EOFException_1a6b34be8387d0bd2624cd9732d4f938d5" prot="public" virt="non-virtual"><scope>LAMMPS_NS::EOFException</scope><name>EOFException</name></member>
+      <member refid="classLAMMPS__NS_1_1FileReaderException_1a2fb170921f21fbda485584ccfdf34934" prot="public" virt="non-virtual"><scope>LAMMPS_NS::EOFException</scope><name>FileReaderException</name></member>
+      <member refid="classLAMMPS__NS_1_1FileReaderException_1a36bd74109f547f7f8198faf5a12d2879" prot="private" virt="non-virtual"><scope>LAMMPS_NS::EOFException</scope><name>message</name></member>
+      <member refid="classLAMMPS__NS_1_1FileReaderException_1ad62489809e3df568e973597b928d6d9b" prot="public" virt="virtual"><scope>LAMMPS_NS::EOFException</scope><name>what</name></member>
+      <member refid="classLAMMPS__NS_1_1FileReaderException_1a7ca6af55da2b6d525f9397787f3d244c" prot="public" virt="non-virtual"><scope>LAMMPS_NS::EOFException</scope><name>~FileReaderException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1836 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceLAMMPS__NS_1_1utils" kind="namespace" language="C++">
+    <compoundname>LAMMPS_NS::utils</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="utils_8h_1abc6126af1d45847bc59afa0aa3216b04" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@3</name>
+        <enumvalue id="utils_8h_1abc6126af1d45847bc59afa0aa3216b04aa65b44d3ecae7e40bcc0a324a2b1247c" prot="public">
+          <name>NOCONVERT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="utils_8h_1abc6126af1d45847bc59afa0aa3216b04aa0beaefd4c866f9bc9d45461ca768db6" prot="public">
+          <name>METAL2REAL</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="utils_8h_1abc6126af1d45847bc59afa0aa3216b04aa0ce019bd963959e609405c92a7e04dc" prot="public">
+          <name>REAL2METAL</name>
+          <initializer>= 1&lt;&lt;1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="345" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" bodystart="345" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="enum" id="utils_8h_1adc29c2ff13d900c2f185ee95427fb06c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@4</name>
+        <enumvalue id="utils_8h_1adc29c2ff13d900c2f185ee95427fb06ca6ce26a62afab55d7606ad4e92428b30c" prot="public">
+          <name>UNKNOWN</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="utils_8h_1adc29c2ff13d900c2f185ee95427fb06cabc1e15cc4a1ee864210dbada3bda6842" prot="public">
+          <name>ENERGY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="346" column="5" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" bodystart="346" bodyend="346"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="utils_8h_1a3a2003eb8f17075d799ecf645e4f2c30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool strmatch</definition>
+        <argsstring>(const std::string &amp;text, const std::string &amp;pattern)</argsstring>
+        <name>strmatch</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pattern</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match text against a simplified regex pattern</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the text to be matched against the pattern </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pattern</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the search pattern, which may contain regexp markers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the pattern matches, false if not</para>
+</simplesect>
+More flexible and specific matching of a string against a pattern. This function is supposed to be a more safe, more specific and simple to use API to find pattern matches. The purpose is to replace uses of either strncmp() or strstr() in the code base to find sub-strings safely. With strncmp() finding prefixes, the number of characters to match must be counted, which can lead to errors, while using &quot;^pattern&quot; will do the same with less problems. Matching for suffixes using strstr() is not as specific as &apos;pattern$&apos;, and complex matches, e.g. &quot;^rigid.*\/small.*&quot;, to match all small body optimized rigid fixes require only one test.</para>
+<para>The use of std::string arguments allows for simple concatenation even with char * type variables. Example: utils::strmatch(text, std::string(&quot;^&quot;) + charptr) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="38" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="101" bodyend="105" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="38" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a0b5a7272e51011310cc877ba444f9ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void logmesg</definition>
+        <argsstring>(LAMMPS *lmp, const std::string &amp;mesg)</argsstring>
+        <name>logmesg</name>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>lmp</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>mesg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send message to screen and logfile, if available</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mesg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message to be printed</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function simplifies the repetitive task of outputting some message to both the screen and/or the log file. In combination with using fmt::format(), which returns the formatted text in a std::string() instance, this can be used to reduce operations previously requiring several lines of code to a single statement. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="45" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="114" bodyend="118" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="45" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a59872d3df515856d461cc81f8de6777e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getsyserror</definition>
+        <argsstring>()</argsstring>
+        <name>getsyserror</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return a string representing the current system error status</para>
+<para>This is a wrapper around calling strerror(errno).</para>
+<para><simplesect kind="return"><para>error string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="53" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="123" bodyend="126" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="53" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a151f0249d5fa35b2f79f9fd411f0c61b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sfgets</definition>
+        <argsstring>(const char *srcname, int srcline, char *s, int size, FILE *fp, const char *filename, Error *error)</argsstring>
+        <name>sfgets</name>
+        <param>
+          <type>const char *</type>
+          <declname>srcname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>srcline</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>Error *</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>safe wrapper around fgets() which aborts on errors or EOF and prints a suitable error message to help debugging</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>srcname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the calling source file (from FLERR macro) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line in the calling source file (from FLERR macro) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer for storing the result of fgets() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of buffer s (max number of bytes read by fgets()) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file pointer used by fgets() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file name associated with fp (may be a null pointer; then <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> will try to detect) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to Error class instance (for abort) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="66" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="151" bodyend="177" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="66" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a5fc62aaa4658e16ec52523996d92af83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sfread</definition>
+        <argsstring>(const char *srcname, int srcline, void *s, size_t size, size_t num, FILE *fp, const char *filename, Error *error)</argsstring>
+        <name>sfread</name>
+        <param>
+          <type>const char *</type>
+          <declname>srcname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>srcline</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>Error *</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>safe wrapper around fread() which aborts on errors or EOF and prints a suitable error message to help debugging</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>srcname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the calling source file (from FLERR macro) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line in the calling source file (from FLERR macro) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer for storing the result of fread() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data elements read by fread() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data elements read by fread() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file pointer used by fread() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file name associated with fp (may be a null pointer; then <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> will try to detect) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to Error class instance (for abort) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="81" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="180" bodyend="205" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="81" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a7958600997ce9aecc9c589d6a340b93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string check_packages_for_style</definition>
+        <argsstring>(const std::string &amp;style, const std::string &amp;name, LAMMPS *lmp)</argsstring>
+        <name>check_packages_for_style</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>lmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report if a requested style is in a package or may have a typo</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type of style that is to be checked for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of style that was not found </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to top-level <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string usable for error messages </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="91" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="209" bodyend="224" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="91" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a503fd271ff7cf07725ad0b03b6d7f762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double numeric</definition>
+        <argsstring>(const char *file, int line, const char *str, bool do_abort, LAMMPS *lmp)</argsstring>
+        <name>numeric</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>do_abort</declname>
+        </param>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>lmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a string to a floating point number while checking if it is a valid floating point or integer number</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line number in source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to be converted to number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>do_abort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>determines whether to call Error::one() or Error::all() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to top-level <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double precision floating point number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="104" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="233" bodyend="262" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="104" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a0fa1caaa9b4c196fb960712e6f2dfe5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int inumeric</definition>
+        <argsstring>(const char *file, int line, const char *str, bool do_abort, LAMMPS *lmp)</argsstring>
+        <name>inumeric</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>do_abort</declname>
+        </param>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>lmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a string to an integer number while checking if it is a valid integer number (regular int)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line number in source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to be converted to number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>do_abort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>determines whether to call Error::one() or Error::all() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to top-level <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer number (regular int) <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="117" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="270" bodyend="297" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="117" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1af773a99c24a68d2055c9116ae1835f0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bigint</type>
+        <definition>bigint bnumeric</definition>
+        <argsstring>(const char *file, int line, const char *str, bool do_abort, LAMMPS *lmp)</argsstring>
+        <name>bnumeric</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>do_abort</declname>
+        </param>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>lmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a string to an integer number while checking if it is a valid integer number (bigint)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line number in source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to be converted to number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>do_abort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>determines whether to call Error::one() or Error::all() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to top-level <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer number (bigint) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="130" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="305" bodyend="332" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="130" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a4e8b8a6816b717518c30fd561e6e42fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>tagint</type>
+        <definition>tagint tnumeric</definition>
+        <argsstring>(const char *file, int line, const char *str, bool do_abort, LAMMPS *lmp)</argsstring>
+        <name>tnumeric</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>do_abort</declname>
+        </param>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>lmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a string to an integer number while checking if it is a valid integer number (tagint)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line number in source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to be converted to number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>do_abort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>determines whether to call Error::one() or Error::all() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to top-level <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer number (tagint) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="143" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="340" bodyend="367" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="143" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1aec32e4cae8ced7029e6f162a7442bcf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TYPE</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void bounds</definition>
+        <argsstring>(const char *file, int line, const std::string &amp;str, bigint nmin, bigint nmax, TYPE &amp;nlo, TYPE &amp;nhi, Error *error)</argsstring>
+        <name>bounds</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>bigint</type>
+          <declname>nmin</declname>
+        </param>
+        <param>
+          <type>bigint</type>
+          <declname>nmax</declname>
+        </param>
+        <param>
+          <type>TYPE &amp;</type>
+          <declname>nlo</declname>
+        </param>
+        <param>
+          <type>TYPE &amp;</type>
+          <declname>nhi</declname>
+        </param>
+        <param>
+          <type>Error *</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute index bounds derived from a string with a possible wildcard</para>
+<para>This functions processes the string in <emphasis>str</emphasis> and set the values of <emphasis>nlo</emphasis> and <emphasis>nhi</emphasis> according to the following five cases:</para>
+<para><itemizedlist>
+<listitem><para>a single number, i: nlo = i; nhi = i;</para>
+</listitem><listitem><para>a single asterisk, *: nlo = nmin; nhi = nmax;</para>
+</listitem><listitem><para>a single number followed by an asterisk, i*: nlo = i; nhi = nmax;</para>
+</listitem><listitem><para>a single asterisk followed by a number, *i: nlo = nmin; nhi = i;</para>
+</listitem><listitem><para>two numbers with an asterisk in between. i*j: nlo = i; nhi = j;</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line number in source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to be processed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nmin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>smallest possible lower bound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>largest allowed upper bound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nlo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lower bound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nhi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper bound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to Error class for out-of-bounds messages </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="167" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="373" bodyend="406" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="167" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a4672127156cfeac7cfb3376dfb7f6ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int expand_args</definition>
+        <argsstring>(const char *file, int line, int narg, char **arg, int mode, char **&amp;earg, LAMMPS *lmp)</argsstring>
+        <name>expand_args</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>narg</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>char **&amp;</type>
+          <declname>earg</declname>
+        </param>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>lmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Expand list of arguments when containing fix/compute wildcards</para>
+<para>This function searches the list of arguments in <emphasis>arg</emphasis> for strings of the kind c_ID[*] or f_ID[*] referring to computes or fixes. Any such strings are replaced by one or more strings with the &apos;*&apos; character replaced by the corresponding possible numbers as determined from the fix or compute instance. Other strings are just copied. If the <emphasis>mode</emphasis> parameter is set to 0, expand global vectors, but not global arrays; if it is set to 1, expand global arrays (by column) but not global vectors.</para>
+<para>If any expansion happens, the earg list and all its strings are new allocations and must be freed explicitly by the caller. Otherwise arg and earg will point to the same address and no explicit de-allocation is needed by the caller.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line number in source file for error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>narg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of arguments in current list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument list, possibly containing wildcards </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>select between global vectors(=0) and arrays (=1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>earg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new argument list with wildcards expanded </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to top-level <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of arguments in expanded list </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="195" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="419" bodyend="545" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="195" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a2eaed9f7998793904b0953fe0d9bbf6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string trim</definition>
+        <argsstring>(const std::string &amp;line)</argsstring>
+        <name>trim</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trim leading and trailing whitespace. Like TRIM() in Fortran.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string that should be trimmed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new string without whitespace (string) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="203" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="551" bodyend="558" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="203" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1ae197fb8181a875095b3dbc0f1e2cdf2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string trim_comment</definition>
+        <argsstring>(const std::string &amp;line)</argsstring>
+        <name>trim_comment</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return string with anything from &apos;#&apos; onward removed</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string that should be trimmed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new string without comment (string) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="210" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="564" bodyend="570" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="210" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a31175af2f2305fea6e26a2f780e0a491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t count_words</definition>
+        <argsstring>(const std::string &amp;text, const std::string &amp;separators)</argsstring>
+        <name>count_words</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>separators</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count words in string with custom choice of separating characters</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string that should be searched </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>separators</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string containing characters that will be treated as whitespace </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of words found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="218" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="613" bodyend="628" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="218" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1ab469ccad212a812ee2f67727307509ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t count_words</definition>
+        <argsstring>(const std::string &amp;text)</argsstring>
+        <name>count_words</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count words in string, ignore any whitespace matching &quot; \t\r\n\f&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string that should be searched </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of words found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="225" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="605" bodyend="607" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="225" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a8cda2fde7eb5a65ed3f071ed17f42054" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t count_words</definition>
+        <argsstring>(const char *text)</argsstring>
+        <name>count_words</name>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count words in C-string, ignore any whitespace matching &quot; \t\r\n\f&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string that should be searched </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of words found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="232" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="576" bodyend="599" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="232" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1af92e41728a60e9d949fa37e68f132178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t trim_and_count_words</definition>
+        <argsstring>(const std::string &amp;text, const std::string &amp;separators=&quot; \t\r\n\f&quot;)</argsstring>
+        <name>trim_and_count_words</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>separators</declname>
+          <defval>&quot; \t\r\n\f&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count words in a single line, trim anything from &apos;#&apos; onward</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string that should be trimmed and searched </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>separators</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string containing characters that will be treated as whitespace </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of words found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="240" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="634" bodyend="636" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="240" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1ac6b258d9949ba630b8383fa857f9bbb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; split_words</definition>
+        <argsstring>(const std::string &amp;text)</argsstring>
+        <name>split_words</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Take text and split into non-whitespace words.</para>
+<para>This can handle strings with single and double quotes, escaped quotes, and escaped codes within quotes, but due to using an STL container and STL strings is rather slow because of making copies. Designed for parsing command lines and similar text and not for time critical processing. Use a tokenizer class for that.</para>
+<para><verbatim>embed:rst
+
+*See also*
+   :cpp:class:`Tokenizer`, :cpp:class:`ValueTokenizer`</verbatim> <verbatim>   \param text string that should be split
+   \return STL vector with the words 
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="260" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="642" bodyend="719" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="260" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a66b3c703e53c70f60ba745a557cace67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_integer</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>is_integer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if string can be converted to valid integer</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string that should be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true, if string contains valid a integer, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="267" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="725" bodyend="735" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="267" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a3f130082bbb981e0253f32bc46c1b3b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_double</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>is_double</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if string can be converted to valid floating-point number</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string that should be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true, if string contains valid number, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="274" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="741" bodyend="753" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="274" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1ab0c198e2f93ff69b3fc01b00a00e7cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * guesspath</definition>
+        <argsstring>(char *buf, int len, FILE *fp)</argsstring>
+        <name>guesspath</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Try to detect pathname from FILE pointer.</para>
+<para>Currently only supported on Linux, otherwise will report &quot;(unknown)&quot;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>storage buffer for pathname. output will be truncated if not large enough </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of storage buffer. output will be truncated to this length - 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FILE pointer struct from STDIO library for which we want to detect the name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the storage buffer, i.e. buf</para>
+</simplesect>
+On Linux the folder /proc/self/fd holds symbolic links to the actual pathnames associated with each open file descriptor of the current process.</para>
+<para>This function is used to provide a filename with error messages in functions where the filename is not passed as an argument, but the FILE * pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="285" column="16" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="134" bodyend="147" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="285" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1af571f031125be18774c73496bf428f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string path_basename</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>path_basename</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Strip off leading part of path, return just the filename</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>file name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="292" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="759" bodyend="773" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="292" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1ab100315d6ea8390c0a3f9678010131ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string path_dirname</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>path_dirname</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the directory part of a path. Return &quot;.&quot; if empty</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>directory name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="299" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="779" bodyend="789" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="299" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1afdc0fd0cefb9e5241e4ba20852877f4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string path_join</definition>
+        <argsstring>(const std::string &amp;a, const std::string &amp;b)</argsstring>
+        <name>path_join</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Join two pathname segments</para>
+<para>This uses the forward slash &apos;/&apos; character unless <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> is compiled for Windows where it used the equivalent backward slash &apos;\&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>combined path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="310" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="795" bodyend="801" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="310" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a9b6a15dfd00fe9eebeb84f092402b6b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool file_is_readable</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>file_is_readable</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if file exists and is readable</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if file exists and is readable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="317" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="807" bodyend="814" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="317" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a54601c14224556c45ed863cb95e8d49c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string get_potential_file_path</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>get_potential_file_path</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine full path of potential file. If file is not found in current directory, search directories listed in LAMMPS_POTENTIALS environment variable</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>full path to potential file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="325" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="827" bodyend="852" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="325" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a86fd64c9c2c2183daada07c001e91392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string get_potential_date</definition>
+        <argsstring>(const std::string &amp;path, const std::string &amp;potential_name)</argsstring>
+        <name>get_potential_date</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>potential_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read potential file and return DATE field if it is present</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>potential_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of potential that is being read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DATE field if present </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="333" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="860" bodyend="872" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="333" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1ab8b096aefd75e4cef0162f113b800c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string get_potential_units</definition>
+        <argsstring>(const std::string &amp;path, const std::string &amp;potential_name)</argsstring>
+        <name>get_potential_units</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>potential_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read potential file and return UNITS field if it is present</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>potential_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of potential that is being read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UNITS field if present </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="342" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="879" bodyend="891" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="342" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a4d70c1d4e44dad6d82bb7fb643adb095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_supported_conversions</definition>
+        <argsstring>(const int property)</argsstring>
+        <name>get_supported_conversions</name>
+        <param>
+          <type>const int</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return bitmask of available conversion factors for a given property</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>property to be converted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bitmask indicating available conversions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="352" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="896" bodyend="902" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="352" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1ae069d34c47dc4eeb168de963e592f5ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double get_conversion_factor</definition>
+        <argsstring>(const int property, const int conversion)</argsstring>
+        <name>get_conversion_factor</name>
+        <param>
+          <type>const int</type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>conversion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return unit conversion factor for given property and selected from/to units</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>property to be converted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conversion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>constant indicating the conversion </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>conversion factor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="360" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="909" bodyend="921" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="360" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a1b92528e9bbdff202464fded75539b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILE *</type>
+        <definition>FILE * open_potential</definition>
+        <argsstring>(const std::string &amp;name, LAMMPS *lmp, int *auto_convert)</argsstring>
+        <name>open_potential</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> *</type>
+          <declname>lmp</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>auto_convert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open a potential file as specified by <emphasis>name</emphasis></para>
+<para>If opening the file directly fails, the function will search for it in the list of folder pointed to by the environment variable <computeroutput>LAMMPS_POTENTIALS</computeroutput> (if it is set).</para>
+<para>If the potential file has a <computeroutput>UNITS</computeroutput> tag in the first line, the tag&apos;s value is compared to the current unit style setting. The behavior of the function then depends on the value of the <emphasis>auto_convert</emphasis> parameter. If it is a null pointer, then the unit values must match or else the open will fail with an error. Otherwise the bitmask that <emphasis>auto_convert</emphasis> points to is used check for compatibility with possible automatic conversions by the calling function. If compatible, the bitmask is set to the required conversion or <computeroutput>utils::NOCONVERT</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file- or pathname of the potential file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to top-level <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auto_convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to unit conversion bitmask or <computeroutput>nullptr</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FILE pointer of the opened potential file or <computeroutput>nullptr</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="383" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="928" bodyend="978" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="383" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1afd22548fe9c6d4570ffcde59947a1764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double timespec2seconds</definition>
+        <argsstring>(const std::string &amp;timespec)</argsstring>
+        <name>timespec2seconds</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>timespec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a time string to seconds</para>
+<para>The strings &quot;off&quot; and &quot;unlimited&quot; result in -1</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timespec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string in the following format: ([[HH:]MM:]SS) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>total in seconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="392" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="985" bodyend="1010" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="392" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1af07ce9a5537cbc035845686e894f3491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int date2num</definition>
+        <argsstring>(const std::string &amp;date)</argsstring>
+        <name>date2num</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> version date to a number</para>
+<para>This will generate a number YYYYMMDD from a date string (with or without blanks) that is suitable for numerical comparisons, i.e. later dates will generate a larger number.</para>
+<para>The day may or may not have a leading zero, the month is identified by the first 3 letters (so there may be more) and the year may be 2 or 4 digits (the missing 2 digits will be assumed as 20. That is 04 corresponds to 2004).</para>
+<para>No check is made whether the date is valid.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string in the format (Day Month Year) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>date code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="409" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="1016" bodyend="1038" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="409" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1af677fa53e7e5713dfb0fa6d6c3c6f81e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void merge_sort</definition>
+        <argsstring>(int *index, int num, void *ptr, int(*comp)(int, int, void *))</argsstring>
+        <name>merge_sort</name>
+        <param>
+          <type>int *</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>int(*)(int, int, void *)</type>
+          <declname>comp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Custom merge sort implementation</para>
+<para>This function provides a custom upward hybrid merge sort implementation with support to pass an opaque pointer to the comparison function, e.g. for access to class members. This avoids having to use global variables. For improved performance, it uses an in-place insertion sort on initial chunks of up to 64 elements and switches to merge sort from then on.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array with indices to be sorted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the index array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to opaque object passed to comparison function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>comp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to comparison function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="426" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.cpp" bodystart="1045" bodyend="1101" declfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" declline="426" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/utils.h" line="30" column="3"/>
+  </compounddef>
+</doxygen>

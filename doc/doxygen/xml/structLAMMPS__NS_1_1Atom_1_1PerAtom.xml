@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structLAMMPS__NS_1_1Atom_1_1PerAtom" kind="struct" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::Atom::PerAtom</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a5ac083a645d964373f022d03df4849c8" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="203" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1PerAtom_1ab96816d317aa5196e2ef198d9a8d621b" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="204" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a5b184253fb1bae6c35c7afb8532dd189" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* address_length</definition>
+        <argsstring></argsstring>
+        <name>address_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="205" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a7872442e11a0cb855d39ee176f625ac0" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* address_maxcols</definition>
+        <argsstring></argsstring>
+        <name>address_maxcols</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="206" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a5d1502fc2354f6dafba8668cc79b19f3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int datatype</definition>
+        <argsstring></argsstring>
+        <name>datatype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="207" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a4407a60bc4387adae24cee658711f2d9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cols</definition>
+        <argsstring></argsstring>
+        <name>cols</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="208" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a949b4e58f029441443bb427f57f198c2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int collength</definition>
+        <argsstring></argsstring>
+        <name>collength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="209" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a6143658827b2653f8fd11e662122a104" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int threadflag</definition>
+        <argsstring></argsstring>
+        <name>threadflag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="210" column="9" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" line="202" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/atom.h" bodystart="202" bodyend="211"/>
+    <listofallmembers>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1PerAtom_1ab96816d317aa5196e2ef198d9a8d621b" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::PerAtom</scope><name>address</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a5b184253fb1bae6c35c7afb8532dd189" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::PerAtom</scope><name>address_length</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a7872442e11a0cb855d39ee176f625ac0" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::PerAtom</scope><name>address_maxcols</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a949b4e58f029441443bb427f57f198c2" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::PerAtom</scope><name>collength</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a4407a60bc4387adae24cee658711f2d9" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::PerAtom</scope><name>cols</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a5d1502fc2354f6dafba8668cc79b19f3" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::PerAtom</scope><name>datatype</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a5ac083a645d964373f022d03df4849c8" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::PerAtom</scope><name>name</name></member>
+      <member refid="structLAMMPS__NS_1_1Atom_1_1PerAtom_1a6143658827b2653f8fd11e662122a104" prot="public" virt="non-virtual"><scope>LAMMPS_NS::Atom::PerAtom</scope><name>threadflag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

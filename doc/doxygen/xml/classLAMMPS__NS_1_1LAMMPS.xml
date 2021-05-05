@@ -1,0 +1,933 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLAMMPS__NS_1_1LAMMPS" kind="class" language="C++" prot="public">
+    <compoundname>LAMMPS_NS::LAMMPS</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1aba0c1b8f0296e9ead3171739a4dc54cb" prot="public" static="no" mutable="no">
+        <type>class Memory *</type>
+        <definition>class Memory* memory</definition>
+        <argsstring></argsstring>
+        <name>memory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="25" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1abfb023f3a2406089cf4e31d256992b19" prot="public" static="no" mutable="no">
+        <type>class Error *</type>
+        <definition>class Error* error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="26" column="14" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a8e127365f24f1e9551d4e9f1ab81bb40" prot="public" static="no" mutable="no">
+        <type>class Universe *</type>
+        <definition>class Universe* universe</definition>
+        <argsstring></argsstring>
+        <name>universe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="27" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a1c1ed23d5eb50caae3fbd4234916c7a7" prot="public" static="no" mutable="no">
+        <type>class <ref refid="classLAMMPS__NS_1_1Input" kindref="compound">Input</ref> *</type>
+        <definition>class Input* input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="28" column="14" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a280c48468a6f86b98bfd01f949f1568e" prot="public" static="no" mutable="no">
+        <type>class <ref refid="classLAMMPS__NS_1_1Atom" kindref="compound">Atom</ref> *</type>
+        <definition>class Atom* atom</definition>
+        <argsstring></argsstring>
+        <name>atom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="30" column="13" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ae733a6cd35cdb02269bef234ae3d5c33" prot="public" static="no" mutable="no">
+        <type>class Update *</type>
+        <definition>class Update* update</definition>
+        <argsstring></argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="31" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a9bf9ccd280808f34796a960cab2319e0" prot="public" static="no" mutable="no">
+        <type>class Neighbor *</type>
+        <definition>class Neighbor* neighbor</definition>
+        <argsstring></argsstring>
+        <name>neighbor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="32" column="17" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a7e0e8e3817af4bb0a7398ae078ba333a" prot="public" static="no" mutable="no">
+        <type>class Comm *</type>
+        <definition>class Comm* comm</definition>
+        <argsstring></argsstring>
+        <name>comm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="33" column="13" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a6339b4cb0124992034a97e37a7013214" prot="public" static="no" mutable="no">
+        <type>class Domain *</type>
+        <definition>class Domain* domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="34" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a8fc6feee26badf5ff29ae63fafdee885" prot="public" static="no" mutable="no">
+        <type>class Force *</type>
+        <definition>class Force* force</definition>
+        <argsstring></argsstring>
+        <name>force</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="35" column="14" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a99b3e7ae1040115b64453229de0f789f" prot="public" static="no" mutable="no">
+        <type>class Modify *</type>
+        <definition>class Modify* modify</definition>
+        <argsstring></argsstring>
+        <name>modify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="36" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ad10322799f9d4fcb1bfad7c2b17ea30f" prot="public" static="no" mutable="no">
+        <type>class Group *</type>
+        <definition>class Group* group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="37" column="14" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1abdc34c3d3449f2c1af03b7d66b631604" prot="public" static="no" mutable="no">
+        <type>class Output *</type>
+        <definition>class Output* output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="38" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ae11f6cb2938061b5cd2486ef2c422dab" prot="public" static="no" mutable="no">
+        <type>class Timer *</type>
+        <definition>class Timer* timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="39" column="14" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1aa31f487a99743d24af9076a3e11e5425" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="41" column="14" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a2b43fa2594d1f4f2e2f3746b296a7801" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int num_ver</definition>
+        <argsstring></argsstring>
+        <name>num_ver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="42" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1adad7a6f85831f3ac84d854b6c80aef43" prot="public" static="no" mutable="no">
+        <type>MPI_Comm</type>
+        <definition>MPI_Comm world</definition>
+        <argsstring></argsstring>
+        <name>world</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="47" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1af19157da745ecb3f2b088c8f3a10c0a7" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* infile</definition>
+        <argsstring></argsstring>
+        <name>infile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="48" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a1fa21fbb1feb79454c9d40a8c43aed58" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* screen</definition>
+        <argsstring></argsstring>
+        <name>screen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="49" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ab25a3625a8efbaa3d81ef27bbb51c9c5" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* logfile</definition>
+        <argsstring></argsstring>
+        <name>logfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="50" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ac9d778eb02a88777f472c104cd4ac563" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double initclock</definition>
+        <argsstring></argsstring>
+        <name>initclock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="52" column="10" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a5a1a4937f25d3a2b1f2134598cff69b3" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* suffix</definition>
+        <argsstring></argsstring>
+        <name>suffix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="54" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ad0b5ef78cb61d3a7fb73549ac9cf9be7" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * suffix2</definition>
+        <argsstring></argsstring>
+        <name>suffix2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="54" column="14" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ac94548f583b71edcb088e9e90cad8ad2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int suffix_enable</definition>
+        <argsstring></argsstring>
+        <name>suffix_enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="55" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ac7f91ab67668c2e9736597755d00e910" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* exename</definition>
+        <argsstring></argsstring>
+        <name>exename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="56" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a1bba907f91f9b7e3df19b7d5327555ae" prot="public" static="no" mutable="no">
+        <type>char ***</type>
+        <definition>char*** packargs</definition>
+        <argsstring></argsstring>
+        <name>packargs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="57" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1aa551d936b9ee390a96a1f48486467023" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int num_package</definition>
+        <argsstring></argsstring>
+        <name>num_package</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="58" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a1e8a849ccde12877877836072a95b612" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cite_enable</definition>
+        <argsstring></argsstring>
+        <name>cite_enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="59" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a14c48fbc2816e5d0da83b8a31c5d9fce" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int clientserver</definition>
+        <argsstring></argsstring>
+        <name>clientserver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="61" column="7" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1aae52386e1d53096d05d76e16b2e51a23" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* cslib</definition>
+        <argsstring></argsstring>
+        <name>cslib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="62" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a7bcb445b29811f9597a8080c0f028649" prot="public" static="no" mutable="no">
+        <type>MPI_Comm</type>
+        <definition>MPI_Comm cscomm</definition>
+        <argsstring></argsstring>
+        <name>cscomm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="63" column="12" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a79b0725d67cd106ae4aa5b6aeffbafef" prot="public" static="no" mutable="no">
+        <type>class KokkosLMP *</type>
+        <definition>class KokkosLMP* kokkos</definition>
+        <argsstring></argsstring>
+        <name>kokkos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="65" column="18" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1acaec25f6b8f4154aaa3b97a00d90ce28" prot="public" static="no" mutable="no">
+        <type>class AtomKokkos *</type>
+        <definition>class AtomKokkos* atomKK</definition>
+        <argsstring></argsstring>
+        <name>atomKK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="66" column="19" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a298fdc3cf5d13803239e76ee101bee67" prot="public" static="no" mutable="no">
+        <type>class MemoryKokkos *</type>
+        <definition>class MemoryKokkos* memoryKK</definition>
+        <argsstring></argsstring>
+        <name>memoryKK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="67" column="21" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ac9299b634449a00b0f71604289c4d47f" prot="public" static="no" mutable="no">
+        <type>class Python *</type>
+        <definition>class Python* python</definition>
+        <argsstring></argsstring>
+        <name>python</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="69" column="16" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a6ed005b2489a0b8471ca83c9fda8e1e8" prot="public" static="no" mutable="no">
+        <type>class CiteMe *</type>
+        <definition>class CiteMe* citeme</definition>
+        <argsstring></argsstring>
+        <name>citeme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="71" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ab8823ad203c18179137565240c5afa70" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* installed_packages[]</definition>
+        <argsstring>[]</argsstring>
+        <name>installed_packages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="74" column="22" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a1b01d7d76faae5927c9adf68d5b7f28c" prot="public" static="yes" mutable="no">
+        <type>const bool</type>
+        <definition>const bool has_git_info</definition>
+        <argsstring></argsstring>
+        <name>has_git_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="77" column="21" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a71e544f7ce6c8d5b43bbc3fe233ecea0" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char git_commit[]</definition>
+        <argsstring>[]</argsstring>
+        <name>git_commit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="78" column="21" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1ac5b8d59484cc1972d94e6dab2785992e" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char git_branch[]</definition>
+        <argsstring>[]</argsstring>
+        <name>git_branch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="79" column="21" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1accd667cc47fb74885ef374a7ef6c2e6b" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char git_descriptor[]</definition>
+        <argsstring>[]</argsstring>
+        <name>git_descriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="80" column="21" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLAMMPS__NS_1_1LAMMPS_1a8dcecbc706f0d013c61199ab2f415862" prot="private" static="no" mutable="no">
+        <type>struct package_styles_lists *</type>
+        <definition>struct package_styles_lists* pkg_lists</definition>
+        <argsstring></argsstring>
+        <name>pkg_lists</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="91" column="29" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1a494c5512fbe010f7eddf168ee45878d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * match_style</definition>
+        <argsstring>(const char *style, const char *name)</argsstring>
+        <name>match_style</name>
+        <param>
+          <type>const char *</type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Return name of package that a specific style belongs to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function checks the given name against all list of styles for all type of styles and if the name and the style match, it returns which package this style belongs to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of style (e.g. atom, pair, fix, etc.) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of style </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Name of the package this style is part of </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="73" column="14" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="1041" bodyend="1060"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1ad442476f0b5d6babaf85c9fdb3c3fbc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LAMMPS</definition>
+        <argsstring>(int, char **, MPI_Comm)</argsstring>
+        <name>LAMMPS</name>
+        <param>
+          <type>int</type>
+          <defname>narg</defname>
+        </param>
+        <param>
+          <type>char **</type>
+          <defname>arg</defname>
+        </param>
+        <param>
+          <type>MPI_Comm</type>
+          <defname>communicator</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> simulation instance</para>
+<para>The <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> constructor starts up a simulation by allocating all fundamental classes in the necessary order, parses input switches and their arguments, initializes communicators, screen and logfile output FILE pointers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>narg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>communicator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MPI communicator used by this <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="82" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="107" bodyend="656"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1ab3410932868638d63f0683577e189e2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~LAMMPS</definition>
+        <argsstring>()</argsstring>
+        <name>~LAMMPS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shut down a <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> simulation instance</para>
+<para>The <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> destructor shuts down the simulation by deleting top-level class instances, closing screen and log files for the global instance (aka &quot;world&quot;) and files and MPI communicators in sub-partitions (&quot;universes&quot;). Then it deletes the fundamental class instances and copies of data inside the class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="83" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="665" bodyend="729"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1ae2ee59f7cc16ee42559c87e81c433039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="84" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="737" bodyend="777"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1ab9020474cf394f7326f5535ecd3971c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void post_create</definition>
+        <argsstring>()</argsstring>
+        <name>post_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="85" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="788" bodyend="836"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="86" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="843" bodyend="857"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1a3a80b6032f86a56bec74609034b3246f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="87" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="864" bodyend="902"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1ab478c4afcdba0f3438b77c67a548f909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_config</definition>
+        <argsstring>(FILE *)</argsstring>
+        <name>print_config</name>
+        <param>
+          <type>FILE *</type>
+          <defname>fp</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="88" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="1278" bodyend="1325"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1a0e0366f32d92ec48bd0c034826e9c101" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_installed_pkg</definition>
+        <argsstring>(const char *pkg)</argsstring>
+        <name>is_installed_pkg</name>
+        <param>
+          <type>const char *</type>
+          <declname>pkg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if a <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> package is enabled in this binary</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pkg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of package </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if yes, else false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="75" column="15" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="1015" bodyend="1021"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1aa78e8e43c3ec3c1063d708b1491673bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _noopt init_pkg_lists</definition>
+        <argsstring>()</argsstring>
+        <name>init_pkg_lists</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="92" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="908" bodyend="1008"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1ae9cb518a8c6c557e1c6b562bef518f96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _noopt help</definition>
+        <argsstring>()</argsstring>
+        <name>help</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="93" column="8" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.cpp" bodystart="1066" bodyend="1243"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1a2ed7025165c177afd77e4bf54ef983d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LAMMPS</definition>
+        <argsstring>()</argsstring>
+        <name>LAMMPS</name>
+        <briefdescription>
+<para>Default constructor. Declared private to prohibit its use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="95" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classLAMMPS__NS_1_1LAMMPS_1ab9ab45344bbb73ab942a410b3040068c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LAMMPS</definition>
+        <argsstring>(const LAMMPS &amp;)</argsstring>
+        <name>LAMMPS</name>
+        <param>
+          <type>const <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Copy constructor. Declared private to prohibit its use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="97" column="3" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> simulation instance. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class contains pointers of all constituent class instances and global variables that are used by a <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> simulation. Its contents represent the entire state of the simulation.</para>
+<para>The <ref refid="classLAMMPS__NS_1_1LAMMPS" kindref="compound">LAMMPS</ref> class manages the components of an MD simulation by creating, deleting, and initializing instances of the classes it is composed of, processing command line flags, and providing access to some global properties. The specifics of setting up and running a simulation are handled by the individual component class instances. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>Atom</label>
+        <link refid="classLAMMPS__NS_1_1Atom"/>
+        <childnode refid="3" relation="protected-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>LAMMPS</label>
+        <link refid="classLAMMPS__NS_1_1LAMMPS"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>atom</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Pointers</label>
+        <link refid="classLAMMPS__NS_1_1Pointers"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>atom</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>lmp</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Input</label>
+        <link refid="classLAMMPS__NS_1_1Input"/>
+        <childnode refid="3" relation="protected-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" line="22" column="1" bodyfile="/Users/jfh3/shared-VM/lammps-29Oct20-user-pinn/src/lammps.h" bodystart="22" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a280c48468a6f86b98bfd01f949f1568e" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>atom</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1acaec25f6b8f4154aaa3b97a00d90ce28" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>atomKK</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a1e8a849ccde12877877836072a95b612" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>cite_enable</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a6ed005b2489a0b8471ca83c9fda8e1e8" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>citeme</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a14c48fbc2816e5d0da83b8a31c5d9fce" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>clientserver</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a7e0e8e3817af4bb0a7398ae078ba333a" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>comm</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ae2ee59f7cc16ee42559c87e81c433039" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>create</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a7bcb445b29811f9597a8080c0f028649" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>cscomm</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1aae52386e1d53096d05d76e16b2e51a23" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>cslib</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a3a80b6032f86a56bec74609034b3246f" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>destroy</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a6339b4cb0124992034a97e37a7013214" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>domain</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1abfb023f3a2406089cf4e31d256992b19" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>error</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ac7f91ab67668c2e9736597755d00e910" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>exename</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a8fc6feee26badf5ff29ae63fafdee885" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>force</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ac5b8d59484cc1972d94e6dab2785992e" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>git_branch</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a71e544f7ce6c8d5b43bbc3fe233ecea0" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>git_commit</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1accd667cc47fb74885ef374a7ef6c2e6b" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>git_descriptor</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ad10322799f9d4fcb1bfad7c2b17ea30f" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>group</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a1b01d7d76faae5927c9adf68d5b7f28c" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>has_git_info</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ae9cb518a8c6c557e1c6b562bef518f96" prot="private" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>help</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1af19157da745ecb3f2b088c8f3a10c0a7" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>infile</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>init</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1aa78e8e43c3ec3c1063d708b1491673bf" prot="private" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>init_pkg_lists</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ac9d778eb02a88777f472c104cd4ac563" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>initclock</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a1c1ed23d5eb50caae3fbd4234916c7a7" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>input</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ab8823ad203c18179137565240c5afa70" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>installed_packages</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a0e0366f32d92ec48bd0c034826e9c101" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>is_installed_pkg</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a79b0725d67cd106ae4aa5b6aeffbafef" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>kokkos</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ad442476f0b5d6babaf85c9fdb3c3fbc7" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>LAMMPS</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a2ed7025165c177afd77e4bf54ef983d6" prot="private" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>LAMMPS</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ab9ab45344bbb73ab942a410b3040068c" prot="private" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>LAMMPS</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ab25a3625a8efbaa3d81ef27bbb51c9c5" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>logfile</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a494c5512fbe010f7eddf168ee45878d9" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>match_style</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1aba0c1b8f0296e9ead3171739a4dc54cb" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>memory</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a298fdc3cf5d13803239e76ee101bee67" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>memoryKK</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a99b3e7ae1040115b64453229de0f789f" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>modify</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a9bf9ccd280808f34796a960cab2319e0" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>neighbor</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1aa551d936b9ee390a96a1f48486467023" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>num_package</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a2b43fa2594d1f4f2e2f3746b296a7801" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>num_ver</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1abdc34c3d3449f2c1af03b7d66b631604" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>output</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a1bba907f91f9b7e3df19b7d5327555ae" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>packargs</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a8dcecbc706f0d013c61199ab2f415862" prot="private" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>pkg_lists</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ab9020474cf394f7326f5535ecd3971c8" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>post_create</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ab478c4afcdba0f3438b77c67a548f909" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>print_config</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ac9299b634449a00b0f71604289c4d47f" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>python</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a1fa21fbb1feb79454c9d40a8c43aed58" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>screen</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a5a1a4937f25d3a2b1f2134598cff69b3" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>suffix</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ad0b5ef78cb61d3a7fb73549ac9cf9be7" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>suffix2</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ac94548f583b71edcb088e9e90cad8ad2" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>suffix_enable</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ae11f6cb2938061b5cd2486ef2c422dab" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>timer</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1a8e127365f24f1e9551d4e9f1ab81bb40" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>universe</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ae733a6cd35cdb02269bef234ae3d5c33" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>update</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1aa31f487a99743d24af9076a3e11e5425" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>version</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1adad7a6f85831f3ac84d854b6c80aef43" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>world</name></member>
+      <member refid="classLAMMPS__NS_1_1LAMMPS_1ab3410932868638d63f0683577e189e2e" prot="public" virt="non-virtual"><scope>LAMMPS_NS::LAMMPS</scope><name>~LAMMPS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
