@@ -26,6 +26,11 @@ make clean-all
 make yes-USER-PINN
 make mpi
 
+IMPORTANT COMPILATION NOTE:  Depending on the system hardware, LAMMPS may require further modification to the file src/MAKE/Makefile.mpi. If your compilation fails, then please consider the following modifications to that makefile
+CCFLAGS =       -g -O3 -std=c++11
+LINKFLAGS =     -g -O3 -std=c++11
+LIB = -lmpi++ -lmpi  (may or may not require)
+
 GNU General Public License version 2 (GPL v2) or the GNU Lesser General Public License version 2.1 (LGPL v2.1).
 
 Backward Compatibility
